@@ -1,0 +1,22 @@
+export const leaders = [
+    { name: "Huỳnh Thị Thu Cúc", title: "Bí thư Đảng ủy", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Thị Như Lai", title: "Bí thư Đảng ủy", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Văn Hậu", title: "Phó Bí thư Thường trực Đảng ủy", image: "https://via.placeholder.com/150" },
+    { name: "Trương Lê Ngọc Lê", title: "Phó Bí thư Thường trực Đảng ủy", image: "https://via.placeholder.com/150" },
+    { name: "Lý Sâm", title: "Phó Bí thư, Chủ tịch UBND", image: "https://via.placeholder.com/150" },
+    { name: "Lê Đặng Hoàng Phúc", title: "Đảng ủy viên, Phó Chủ tịch UBND", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Thị Ngọc Bích", title: "Phó Chủ tịch UBND, Chủ tịch UBND", image: "https://via.placeholder.com/150" },
+    { name: "Lê Minh Thiện", title: "Đảng ủy viên, Phó Chủ tịch UBND", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Quốc Thắng", title: "Đảng ủy viên, Phó Chủ tịch UBND", image: "https://via.placeholder.com/150" },
+    { name: "Lưu Thị Thanh Nhàn", title: "Phó Chủ tịch HĐND", image: "https://via.placeholder.com/150" },
+    { name: "Lê Đức Thịnh", title: "Đảng ủy viên, Trưởng Công an", image: "https://via.placeholder.com/150" },
+    { name: "Phạm Hữu Nghĩa", title: "Đảng ủy viên, Trưởng BCH Quân sự", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Hà Tấn Đại", title: "Đảng ủy viên, Trưởng BCH Quân sự", image: "https://via.placeholder.com/150" },
+    { name: "Cao Thị Minh Thuyền", title: "Đảng ủy viên, Chủ tịch MTTQ", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Khoa Diệu Hạnh", title: "Đảng ủy viên, Chủ tịch Hội Phụ nữ", image: "https://via.placeholder.com/150" },
+    { name: "Bùi Thái Châu", title: "Đảng ủy viên, Bí thư Đoàn Thanh niên", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Thị Chiến", title: "Đảng ủy viên, Công chức TP – HT xã", image: "https://via.placeholder.com/150" },
+    { name: "Trần Thị Hồng Hạnh", title: "Đảng ủy viên, Bí thư Chi bộ Trường TH Mỹ Hòa", image: "https://via.placeholder.com/150" },
+    { name: "Nguyễn Thị Thu Hằng", title: "Đảng ủy viên, Hiệu trưởng trường THCS Tô Ký", image: "https://via.placeholder.com/150" },
+  ];
+  
