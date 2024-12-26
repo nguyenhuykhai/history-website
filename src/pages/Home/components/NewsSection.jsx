@@ -1,12 +1,12 @@
 import React from "react";
-import { newsItems } from "../data/mockNews";
+import { newsItems } from "../../../data/mockNews";
 
 const NewsSection = () => {
   return (
     <section className="bg-gray-100 p-4">
       <div className="container mx-auto">
         <h2 className="text-xl font-bold bg-red-800 text-white p-2 mb-4">
-          TIN NỔI BẬT
+          HOẠT ĐỘNG NỔI BẬT
         </h2>
 
         <section className="grid grid-cols-3 gap-6 mb-10">

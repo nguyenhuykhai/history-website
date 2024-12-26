@@ -1,5 +1,5 @@
 import React from "react";
-import { suggestions } from "../data/mockSuggestions";
+import { suggestions } from "../../../data/mockSuggestions";
 
 const SuggestionsSection = () => {
   return (
