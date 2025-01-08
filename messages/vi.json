@@ -1,0 +1,24 @@
+{
+    "Navigation": {
+      "home": "Trang chủ",
+      "about": "Giới thiệu",
+      "news": "Tin tức",
+      "services": "Dịch vụ",
+      "contact": "Liên hệ"
+    },
+    "Home": {
+      "title": "Chào mừng đến với Website"
+    },
+    "About": {
+      "title": "Về chúng tôi"
+    },
+    "News": {
+      "title": "Tin tức mới nhất"
+    },
+    "Services": {
+      "title": "Dịch vụ của chúng tôi"
+    },
+    "Contact": {
+      "title": "Liên hệ với chúng tôi"
+    }
+  } 

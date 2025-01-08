@@ -1,0 +1,24 @@
+{
+    "Navigation": {
+      "home": "Home",
+      "about": "About",
+      "news": "News",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "Home": {
+      "title": "Welcome to Our Website"
+    },
+    "About": {
+      "title": "About Us"
+    },
+    "News": {
+      "title": "Latest News"
+    },
+    "Services": {
+      "title": "Our Services"
+    },
+    "Contact": {
+      "title": "Contact Us"
+    }
+  } 
