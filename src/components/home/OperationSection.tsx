@@ -16,6 +16,8 @@ const OperationSection = () => {
               className="h-auto max-w-full rounded-lg"
               src={placeholder500x300}
               alt=""
+              width={800}
+              height={800}
             />
           </div>
         ))}

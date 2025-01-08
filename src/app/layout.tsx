@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import logo from "../assets/image/background/co-dang.webp";
 import "./globals.css";
 import 'easymde/dist/easymde.min.css'
 
@@ -55,8 +56,11 @@ const workSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BAN CHẤP HÀNH ĐẢNG BỘ XÃ TÂN XUÂN",
-  description: "LỊCH SỬ ĐẢNG BỘ XÃ TÂN XUÂN GIAI ĐOẠN 2000 - 2020",
+  title: "Đảng bộ huyện Hóc Môn",
+  description: "Lịch sử Đảng bộ xã Tân Xuân giai đoạn 2000 - 2020",
+  icons: {
+    icon: logo.src,
+  },
 };
 
 export default async function RootLayout({

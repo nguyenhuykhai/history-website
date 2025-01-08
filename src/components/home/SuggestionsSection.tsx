@@ -1,7 +1,12 @@
 import React from "react";
-import { suggestions } from "../../../data/mockSuggestions";
 
 const SuggestionsSection = () => {
+  const suggestions = [
+    "Nhận thức đúng về cuộc cách mạng tinh gọn bộ máy",
+    "Giữ gìn uy tín đảng viên góp phần bảo vệ nền tảng tư tưởng của Đảng",
+    "Thực hiện tốt chức năng đối ngoại trong tình hình mới",
+  ];
+
   return (
     <section className="bg-gray-100 p-4 mb-10">
       <h3 className="text-lg font-bold text-red-800 mb-4">Góp Ý Xây Dựng Đảng</h3>

@@ -1,112 +1,93 @@
-import React from "react";
-import { newsItems } from "../../../data/mockNews";
-import { placeholder150, placeholder800x800 } from "../../../assets";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { NEWS_QUERY } from "@/sanity/lib/queries";
+import { client } from "@/sanity/lib/client";
+import Image from "next/image";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+
+interface News {
+  title: string;
+  slug: string;
+  image: string;
+  author: {
+    name: string;
+    title: string;
+    _id: string;
+  };
+  category: string;
+  createdAt: string;
+  description: string;
+}
 
 const NewsSection = () => {
+  const [newsData, setNewsData] = useState<News[]>([]);
+  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const posts = await client.fetch(NEWS_QUERY);
+      setNewsData(posts);
+    };
+    fetchData();
+  }, []);
+
+  if (!newsData || newsData.length === 0) return null;
+
   return (
-    <section className="bg-gray-100 p-4">
+    <section className="bg-gray-100 dark:bg-gray-900 p-4">
       <div className="container mx-auto">
-        <h2 className="text-xl font-bold bg-red-800 text-white p-2 mb-4">
+        <h2 className="text-xl font-bold bg-red-800 dark:bg-red-900 text-white p-2 mb-4">
           HOẠT ĐỘNG NỔI BẬT
         </h2>
 
-        <section className="grid grid-cols-3 gap-6 mb-10">
+        <section className="grid grid-cols-2 gap-6 mb-10">
           {/* Main Article */}
-          <div className="col-span-2">
-            <div
-              id="default-carousel"
-              class="relative w-full"
-              data-carousel="slide"
-            >
-              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <div
-                    class="hidden duration-700 ease-in-out"
-                    data-carousel-item
-                  >
-                    <img
-                      src={placeholder800x800}
-                      class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                      alt="..."
-                    />
-                  </div>
+          <div className="w-full">
+            <Carousel plugins={[plugin.current]} className="w-full">
+              <CarouselContent>
+                {newsData.map((item, index) => (
+                  <CarouselItem key={index}>
+                    <Card>
+                      <CardHeader>
+                        <CardDescription>{item.createdAt}</CardDescription>
+                        <CardTitle>{item.title}</CardTitle>
+                        <CardDescription>{item.author.name}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Image 
+                          src={item.image} 
+                          alt={item.title} 
+                          width={1280} 
+                          height={700}
+                          className="rounded-lg"
+                        />
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
                 ))}
-              </div>
-              <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <button
-                    type="button"
-                    class="w-3 h-3 rounded-full"
-                    aria-current={index === 0 ? "true" : "false"}
-                    aria-label={`Slide ${index + 1}`}
-                    data-carousel-slide-to="0"
-                  ></button>
-                ))}
-              </div>
-              <button
-                type="button"
-                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-prev
-              >
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg
-                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 1 1 5l4 4"
-                    />
-                  </svg>
-                  <span class="sr-only">Previous</span>
-                </span>
-              </button>
-              <button
-                type="button"
-                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-next
-              >
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg
-                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 9 4-4-4-4"
-                    />
-                  </svg>
-                  <span class="sr-only">Next</span>
-                </span>
-              </button>
-            </div>
+              </CarouselContent>
+            </Carousel>
           </div>
 
           {/* Side Articles */}
           <div className="space-y-4">
-            {newsItems.slice(1).map((item, index) => (
-              <div key={index} className="flex">
-                <img
-                  src={placeholder150}
+            {newsData.slice(1).map((item, index) => (
+              <div key={index} className="flex bg-white dark:bg-gray-800 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <Image
+                  src={item.image}
                   alt={item.title}
+                  width={800}
+                  height={800}
                   className="w-24 h-24 object-cover mr-4 rounded"
                 />
                 <div>
-                  <h4 className="font-semibold line-clamp-2">{item.title}</h4>
-                  <p className="text-sm text-gray-600">
-                    {item.category} - {item.date}
+                  <h4 className="font-semibold line-clamp-2 text-gray-900 dark:text-gray-100">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {item.category} - {item.createdAt}
                   </p>
                 </div>
               </div>

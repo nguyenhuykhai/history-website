@@ -6,10 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "../ui/carousel";
-import { Card, CardContent } from "../ui/card";
 import Autoplay from "embla-carousel-autoplay"
 import { useRef } from "react";
 
@@ -27,12 +24,10 @@ const BannerSection = () => {
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <Image src={image} alt="slider" />
+            <Image src={image} alt="slider" width={1280} height={700} />
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
   );
 };

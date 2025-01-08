@@ -13,6 +13,8 @@ const Sidebar = () => {
             className="w-10 h-10 rounded-full ring-2 ring-gray-300 dark:ring-gray-600"
             src={TanXuanLogo}
             alt="Tan Xuan Logo"
+            width={100}
+            height={100}
           />
           <div className="font-medium text-gray-900 dark:text-white">
             <div className="text-sm text-gray-500 dark:text-gray-400">
@@ -41,6 +43,8 @@ const Sidebar = () => {
               className="w-10 h-10 rounded"
               src={Facebook}
               alt="Facebook"
+              width={100}
+              height={100}
             />
           </div>
 
