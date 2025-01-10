@@ -3,7 +3,7 @@ import { defineType, defineField } from "sanity";
 
 export const news = defineType({
   name: "news",
-  title: "News",
+  title: "Tin tức",
   type: "document",
   icon: Newspaper,
   fields: [
@@ -41,6 +41,9 @@ export const news = defineType({
       name: "createdAt",
       type: "date",
       validation: (Rule) => Rule.required(),
+      options: {
+        dateFormat: "DD/MM/YYYY"
+      },
     }),
   ],
   preview: {

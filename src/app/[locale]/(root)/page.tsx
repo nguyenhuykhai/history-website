@@ -3,7 +3,6 @@ import LeaderSection from "@/components/home/LeaderSection";
 import NewsSection from "@/components/home/NewsSection";
 import OperationSection from "@/components/home/OperationSection";
 import { SanityLive } from "@/sanity/lib/live";
-import SuggestionsSection from "@/components/home/SuggestionsSection";
 
 export default function Home() {
   
@@ -11,9 +10,8 @@ export default function Home() {
     <>
       <main className="container mx-auto">
         <BannerSection />
+        {/* Tin tức */}
         <NewsSection />
-        {/* Góp ý xây dựng Đảng */}
-        <SuggestionsSection />
         {/* Ban lãnh đạo */}
         <LeaderSection />
         {/* Tổ chức Đảng */}

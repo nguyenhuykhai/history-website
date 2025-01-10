@@ -4,14 +4,15 @@ import ListLeader from "./ListLeader";
 import { client } from "@/sanity/lib/client";
 import { TERMS_QUERY } from "@/sanity/lib/queries";
 import { useEffect, useState } from "react";
+import { Terms } from "@/sanity/schemaTypes/terms";
 
 const LeaderSection = () => {
-  const [termsData, setTermsData] = useState([]);
-  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+  const [termsData, setTermsData] = useState<Array<Terms>>([]);
+  const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const posts = await client.fetch(TERMS_QUERY);
+      const posts: Array<Terms> = await client.fetch(TERMS_QUERY);
       setTermsData(posts);
     };
     fetchData();
@@ -19,11 +20,11 @@ const LeaderSection = () => {
 
   if (!termsData || termsData.length === 0) return null;
 
-  const handleAccordion = (index: number) => {
-    if (activeAccordion === index) {
+  const handleAccordion = (_id: string) => {
+    if (activeAccordion === _id) {
       setActiveAccordion(null);
     } else {
-      setActiveAccordion(index);
+      setActiveAccordion(_id);
     }
   };
 
@@ -37,7 +38,7 @@ const LeaderSection = () => {
         data-accordion="collapse"
         data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
       >
-        {termsData.map((term: any) => (
+        {termsData.map((term: Terms) => (
           <section key={term._id}>
             <h2 id={`accordion-color-heading-${term._id}`}>
               <button

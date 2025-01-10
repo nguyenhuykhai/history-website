@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
+import { LanguageToggle } from "./language-toggle";
 
 export function Navbar() {
   const t = useTranslations("Navigation");
@@ -34,33 +36,35 @@ export function Navbar() {
             className="text-white hover:text-gray-200 focus:outline-none"
             aria-label="Toggle menu"
           >
-            {isOpen ? (
-              <X size={24} />
-            ) : (
-              <Menu size={24} />
-            )}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Desktop navigation */}
-        <ul className="hidden lg:flex">
-          {navigation.map((item) => (
-            <li key={item.href}>
-              <Link 
-                href={item.href}
-                className="text-white px-4 py-3 block hover:bg-red-700 text-sm xl:text-base"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex justify-between items-center">
+          <ul className="hidden lg:flex items-center">
+            {navigation.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-white px-4 py-3 block hover:bg-red-700 text-sm xl:text-base"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center gap-2">
+            <LanguageToggle />
+            <ThemeToggle />
+          </div>
+        </div>
 
         {/* Mobile navigation */}
-        <ul className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
+        <ul className={`lg:hidden ${isOpen ? "block" : "hidden"}`}>
           {navigation.map((item) => (
             <li key={item.href}>
-              <Link 
+              <Link
                 href={item.href}
                 className="text-white px-4 py-3 block hover:bg-red-700 border-b border-red-700"
                 onClick={() => setIsOpen(false)}

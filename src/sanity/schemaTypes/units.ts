@@ -1,9 +1,10 @@
 import { MapPinHouse } from "lucide-react";
 import { defineType, defineField } from "sanity";
+import { Leader } from "@/sanity/schemaTypes/leader";
 
 export const units = defineType({
   name: "units",
-  title: "Units",
+  title: "Chi bộ",
   type: "document",
   icon: MapPinHouse,
   fields: [
@@ -33,7 +34,7 @@ export const units = defineType({
         {
           type: "reference",
           to: [{ type: "leader" }],
-        },
+        }
       ],
     }),
   ],
@@ -43,3 +44,12 @@ export const units = defineType({
     },
   },
 });
+
+export type Units = {
+  _id: string;
+  name: string;
+  slug: string;
+  description: string;
+  image: string;
+  members: Array<Leader>;
+};

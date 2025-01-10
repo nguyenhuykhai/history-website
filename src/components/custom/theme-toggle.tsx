@@ -1,13 +1,22 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "../ui/button";
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <Button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      {theme === "dark" ? "Light" : "Dark"}
-    </Button>
+    <div className="flex items-center gap-2">
+      {theme === "dark" ? (
+        <Button onClick={() => setTheme("light")}>
+          <Sun className="w-4 h-4" />
+        </Button>
+      ) : (
+        <Button onClick={() => setTheme("dark")}>
+          <Moon className="w-4 h-4" />
+        </Button>
+      )}
+    </div>
   );
-} 
+}

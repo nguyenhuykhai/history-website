@@ -5,8 +5,8 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title("Content")
     .items([
-      S.listItem().title("Terms").child(S.documentTypeList("terms")),
-      S.listItem().title("Leader").child(S.documentTypeList("leader")),
-      S.listItem().title("Units").child(S.documentTypeList("units")),
-      S.listItem().title("News").child(S.documentTypeList("news")),
+      S.listItem().title("Nhiệm kỳ").child(S.documentTypeList("terms")),
+      S.listItem().title("Đảng viên").child(S.documentTypeList("leader")),
+      S.listItem().title("Chi bộ").child(S.documentTypeList("units")),
+      S.listItem().title("Tin tức").child(S.documentTypeList("news")),
     ]);
