@@ -38,9 +38,9 @@ export const terms = defineType({
   },
 });
 
-export type Terms = {
-  _id: string;
-  name: string;
-  description: string;
-  data: Array<Leader>;
-}
+// export type Terms = {
+//   _id: string;
+//   name: string;
+//   description: string;
+//   data: Array<Leader>;
+// }

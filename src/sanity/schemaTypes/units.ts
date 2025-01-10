@@ -45,11 +45,11 @@ export const units = defineType({
   },
 });
 
-export type Units = {
-  _id: string;
-  name: string;
-  slug: string;
-  description: string;
-  image: string;
-  members: Array<Leader>;
-};
+// export type Units = {
+//   _id: string;
+//   name: string;
+//   slug: string;
+//   description: string;
+//   image: string;
+//   members: Array<Leader>;
+// };

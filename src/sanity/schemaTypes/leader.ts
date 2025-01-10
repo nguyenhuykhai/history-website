@@ -102,20 +102,20 @@ export const leader = defineType({
   },
 });
 
-export type Leader = {
-  _id: string;
-  name: string;
-  title: string[];
-  image: string;
-  tenCsd?: string;
-  tenCsdTrucThuoc?: string;
-  soLyLich?: string;
-  soTheDang?: string;
-  gioiTinh?: string;
-  ngaySinh?: string;
-  congViecChinhDangLam?: string;
-  tonGiao?: string;
-  ngayVaoDang?: string;
-  ngayVaoDangChinhThuc?: string;
-  ngayVaoDangLan2?: string;
-};
+// export type Leader = {
+//   _id: string;
+//   name: string;
+//   title: string[];
+//   image: string;
+//   tenCsd?: string;
+//   tenCsdTrucThuoc?: string;
+//   soLyLich?: string;
+//   soTheDang?: string;
+//   gioiTinh?: string;
+//   ngaySinh?: string;
+//   congViecChinhDangLam?: string;
+//   tonGiao?: string;
+//   ngayVaoDang?: string;
+//   ngayVaoDangChinhThuc?: string;
+//   ngayVaoDangLan2?: string;
+// };

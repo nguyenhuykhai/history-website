@@ -15,6 +15,7 @@ export const TERMS_QUERY = defineQuery(
 
 export const NEWS_QUERY = defineQuery(
   `*[_type == "news" && defined(slug.current)] {
+  _id,
   slug,
   title,
   image,
@@ -22,10 +23,25 @@ export const NEWS_QUERY = defineQuery(
   author -> {
     name, _id, title
   },
-  createdAt,
-  description
+  createdAt
  }`
 );
+
+
+export const NEW_QUERY_BY_ID = defineQuery(
+  `*[_type == "news" && _id == $id][0] {
+  _id,
+  slug,
+  title,
+  image,
+  category,
+  author -> {
+    name, _id, title, image
+  },
+  _createdAt,
+  description
+ }`
+)
 
 export const UNITS_QUERY = defineQuery(
   `*[_type == "units" && defined(slug.current)] {

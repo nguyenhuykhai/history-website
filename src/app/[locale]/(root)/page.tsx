@@ -2,22 +2,31 @@ import BannerSection from "@/components/home/BannerSection";
 import LeaderSection from "@/components/home/LeaderSection";
 import NewsSection from "@/components/home/NewsSection";
 import OperationSection from "@/components/home/OperationSection";
-import { SanityLive } from "@/sanity/lib/live";
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { NEWS_QUERY, TERMS_QUERY, UNITS_QUERY } from "@/sanity/lib/queries";
+import { NEWS_QUERYResult, TERMS_QUERYResult, UNITS_QUERYResult } from "@/sanity/types";
 
-export default function Home() {
-  
+export const Home = async () => {
+  const { data: terms }: { data: TERMS_QUERYResult } = await sanityFetch({ query: TERMS_QUERY });
+  const { data: news }: { data: NEWS_QUERYResult } = await sanityFetch({
+    query: NEWS_QUERY,
+  });
+  const { data: units } : { data: UNITS_QUERYResult } = await sanityFetch({ query: UNITS_QUERY });
+
   return (
     <>
       <main className="container mx-auto">
         <BannerSection />
         {/* Tin tức */}
-        <NewsSection />
+        <NewsSection news={news}/>
         {/* Ban lãnh đạo */}
-        <LeaderSection />
+        <LeaderSection terms={terms}/>
         {/* Tổ chức Đảng */}
-        <OperationSection />
+        <OperationSection units={units} />
       </main>
       <SanityLive />
     </>
   );
 }
+
+export default Home;
