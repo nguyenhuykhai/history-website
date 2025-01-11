@@ -16,7 +16,7 @@ const ListLeader: React.FC<ListLeaderProps> = ({ leaders }) => {
     return <p className="text-center text-gray-500">No leaders available.</p>;
   }
   return (
-    <div className="grid grid-cols-5 gap-6 my-4">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-6 my-4">
       {leaders.map((leader) => (
         <div key={leader._id} className="text-center">
           <Image

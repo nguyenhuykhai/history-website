@@ -1,17 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
 import { LanguageToggle } from "./language-toggle";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Navbar() {
   const t = useTranslations("Navigation");
-  const pathname = usePathname();
-  const locale = pathname.split('/')[1]; // Get current locale from URL
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,11 +16,33 @@ export function Navbar() {
   };
 
   const navigation = [
-    { name: t("home"), href: `/${locale}` },
-    { name: t("about"), href: `/${locale}/about` },
-    { name: t("news"), href: `/${locale}/news` },
-    { name: t("services"), href: `/${locale}/services` },
-    { name: t("contact"), href: `/${locale}/contact` },
+    { name: t("home"), href: `/` },
+    { name: t("about"), href: `/about` },
+    { name: t("news"), href: `/news` },
+    { name: t("services"), href: `/services` },
+    { name: t("contact"), href: `/contact` },
+    {
+      name: t("language"),
+      href: `/`,
+      render: (
+        <div className="text-white px-4 py-3 block hover:bg-red-700 border-b border-red-700">
+          <span className="flex items-center gap-2">
+            {t("language")} <LanguageToggle />
+          </span>
+        </div>
+      ),
+    },
+    {
+      name: t("theme"),
+      href: `/`,
+      render: (
+        <div className="text-white px-4 py-3 block hover:bg-red-700 border-b border-red-700">
+          <span className="flex items-center gap-2">
+            {t("theme")} <ThemeToggle />
+          </span>
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -43,8 +62,8 @@ export function Navbar() {
         {/* Desktop navigation */}
         <div className="flex justify-between items-center">
           <ul className="hidden lg:flex items-center">
-            {navigation.map((item) => (
-              <li key={item.href}>
+            {navigation.map((item, index) => (
+              <li key={index}>
                 <Link
                   href={item.href}
                   className="text-white px-4 py-3 block hover:bg-red-700 text-sm xl:text-base"
@@ -54,7 +73,7 @@ export function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
             <LanguageToggle />
             <ThemeToggle />
           </div>
@@ -62,19 +81,23 @@ export function Navbar() {
 
         {/* Mobile navigation */}
         <ul className={`lg:hidden ${isOpen ? "block" : "hidden"}`}>
-          {navigation.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className="text-white px-4 py-3 block hover:bg-red-700 border-b border-red-700"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
+          {navigation.map((item, index) => (
+            <li key={index}>
+              {item.render ? (
+                item.render
+              ) : (
+                <Link
+                  href={item.href}
+                  className="text-white px-4 py-3 block hover:bg-red-700 border-b border-red-700"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
       </div>
     </nav>
   );
-} 
+}

@@ -1,5 +1,5 @@
 "use client";
-import ListLeader from "@/components/home/ListLeader";
+import ListLeader from "@/components/home/molecules/ListLeader";
 import { TERMS_QUERYResult } from "@/sanity/types";
 import React, { useEffect, useState } from "react";
 

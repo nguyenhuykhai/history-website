@@ -1,7 +1,7 @@
-import BannerSection from "@/components/home/BannerSection";
-import LeaderSection from "@/components/home/LeaderSection";
-import NewsSection from "@/components/home/NewsSection";
-import OperationSection from "@/components/home/OperationSection";
+import BannerSection from "@/components/home/organisms/BannerSection";
+import LeaderSection from "@/components/home/organisms/LeaderSection";
+import NewsSection from "@/components/home/organisms/NewsSection";
+import OperationSection from "@/components/home/organisms/OperationSection";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { NEWS_QUERY, TERMS_QUERY, UNITS_QUERY } from "@/sanity/lib/queries";
 import { NEWS_QUERYResult, TERMS_QUERYResult, UNITS_QUERYResult } from "@/sanity/types";

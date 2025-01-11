@@ -10,3 +10,9 @@ export function formatDate(date: string | null) {
   const [year, month, day] = date.split("-");
   return `${day}/${month}/${year}`;
 }
+
+export function formatDateTime(date: string | null) {
+  if (!date) return "";
+  const [year, month, day] = date.split("T")[0].split("-");
+  return `${day}/${month}/${year}`;
+}

@@ -1,14 +1,11 @@
-import { Suspense } from "react";
+import { formatDateTime } from "@/lib/utils";
 import { client } from "@/sanity/lib/client";
 import { NEW_QUERY_BY_ID } from "@/sanity/lib/queries";
-import markdownit from "markdown-it";
 import { NEW_QUERY_BY_IDResult } from "@/sanity/types";
-import { formatDate } from "@/lib/utils";
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import { placeholder150, placeholder500x300 } from "@/assets/image";
+import { CalendarDays } from "lucide-react";
+import markdownit from "markdown-it";
 import Link from "next/link";
-import { Skeleton } from "@/components/ui/skeleton";
+import { notFound } from "next/navigation";
 
 const md = markdownit();
 
@@ -25,51 +22,34 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <section className="pink_container !min-h-[230px]">
-        <p className="tag">{formatDate(data?._createdAt)}</p>
-
-        <h1 className="heading">{data.title}</h1>
+      <section className="section_container !min-h-[230px]">
+        <p className="tag-secondary">{data.category}</p>
+        <h1 className="heading-secondary">{data.title}</h1>
       </section>
 
-      <section className="section_container">
-        <Image
-          src={data.image || placeholder500x300}
-          alt="thumbnail"
-          className="w-full h-auto rounded-xl"
-          width={700}
-          height={400}
-        />
-
-        <div className="space-y-5 mt-10 max-w-4xl mx-auto">
+      <section className="section_container !pt-0">
+        <div className="space-y-5 max-w-4xl mx-auto">
           <div className="flex-between gap-5">
             <Link
               href={`/user/${data.author?._id}`}
-              className="flex gap-2 items-center mb-3"
+              className="flex flex-col gap-2 mb-3"
             >
-              <Image
-                src={data?.author?.image || placeholder150}
-                alt={data?.author?.name || "Author"}
-                width={150}
-                height={150}
-                className="rounded-full drop-shadow-lg"
-              />
-
-              <div>
-                <p className="text-20-medium">{data?.author?.name}</p>
-                <p className="text-16-medium !text-black-300">
-                  {data.author?.title &&
-                    data.author.title.map((title) => `${title} `)}
-                </p>
+              <div className="flex gap-2 items-center">
+                <CalendarDays className="w-5 h-5 text-black-100 dark:text-white-100" />
+                <p className="tag-date">{formatDateTime(data?._createdAt)}</p>
               </div>
+              <p className="text-20-medium">{data?.author?.name}</p>
+              <p className="tag-date !font-medium !text-sm">
+                {data.author?.title &&
+                  data.author.title.map((title) => title).join(", ")}
+              </p>
             </Link>
-
-            <p className="category-tag">{data.category}</p>
           </div>
+          <hr className="divider" />
 
-          <h3 className="text-30-bold">Chi tiết</h3>
           {parsedContent ? (
             <article
-              className="prose max-w-4xl font-work-sans break-all"
+              className="prose max-w-4xl text-justify font-work-sans"
               dangerouslySetInnerHTML={{ __html: parsedContent }}
             />
           ) : (
@@ -78,10 +58,6 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
 
         <hr className="divider" />
-
-        <Suspense fallback={<Skeleton className="view_skeleton" />}>
-          {/* <View id={id} /> */}
-        </Suspense>
       </section>
     </>
   );

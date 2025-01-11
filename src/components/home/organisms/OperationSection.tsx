@@ -20,7 +20,7 @@ const OperationSection = ({ units }: { units: UNITS_QUERYResult }) => {
         CÁC CHI BỘ TRỰC THUỘC
       </h2>
 
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {data.map((item) => (
           <div key={item._id}>
             <Link href={`/about/${item?._id}`}>

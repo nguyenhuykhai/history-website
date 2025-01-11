@@ -1,4 +1,4 @@
-import NewsSectionPart from "@/components/home/NewsSectionPart";
+import NewsSectionPart from "@/components/home/organisms/NewsSectionPart";
 import { NEWS_QUERYResult } from "@/sanity/types";
 
 const NewsSection = ({ news } : { news: NEWS_QUERYResult }) => {

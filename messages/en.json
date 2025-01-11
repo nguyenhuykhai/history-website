@@ -4,7 +4,9 @@
       "about": "About",
       "news": "News",
       "services": "Services",
-      "contact": "Contact"
+      "contact": "Contact",
+      "language": "Choose a language",
+      "theme": "Switch theme"
     },
     "Home": {
       "title": "Welcome to Our Website"

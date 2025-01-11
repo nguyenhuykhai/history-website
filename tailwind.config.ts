@@ -23,9 +23,10 @@ const config: Config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+					"100": "#FF4545",
+          "900": "#991B1B",
+					DEFAULT: "#D84040",
+				},
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -42,6 +43,16 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+				black: {
+					"100": "#333333",
+					"200": "#141413",
+					"300": "#7D8087",
+					DEFAULT: "#000000",
+				},
+				white: {
+					"100": "#F7F7F7",
+					DEFAULT: "#FFFFFF",
+				},
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -54,18 +65,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        oswald: [
-          "Oswald",
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
-        ],
-        body: ["Segoe UI", "sans-serif"],
-      },
+				"work-sans": ["var(--font-work-sans)"],
+			},
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

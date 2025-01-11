@@ -4,7 +4,9 @@
       "about": "Giới thiệu",
       "news": "Tin tức",
       "services": "Dịch vụ",
-      "contact": "Liên hệ"
+      "contact": "Liên hệ",
+      "language": "Chọn ngôn ngữ",
+      "theme": "Đổi chủ đề"
     },
     "Home": {
       "title": "Chào mừng đến với Website"

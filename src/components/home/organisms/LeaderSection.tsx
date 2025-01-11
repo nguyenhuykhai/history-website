@@ -1,4 +1,4 @@
-import LeaderSectionPart from "@/components/home/LeaderSectionPart";
+import LeaderSectionPart from "@/components/home/organisms/LeaderSectionPart";
 import { TERMS_QUERYResult } from "@/sanity/types";
 
 const LeaderSection = ({ terms } : { terms: TERMS_QUERYResult }) => {
