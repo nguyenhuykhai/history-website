@@ -1,6 +1,5 @@
 import { Flag } from "lucide-react";
 import { defineType, defineField } from "sanity";
-import { Leader } from "@/sanity/schemaTypes/leader";
 
 export const terms = defineType({
   name: "terms",
@@ -37,10 +36,3 @@ export const terms = defineType({
     },
   },
 });
-
-// export type Terms = {
-//   _id: string;
-//   name: string;
-//   description: string;
-//   data: Array<Leader>;
-// }

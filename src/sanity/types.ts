@@ -190,6 +190,7 @@ export type Leader = {
   ngayVaoDang?: string;
   ngayVaoDangChinhThuc?: string;
   ngayVaoDangLan2?: string;
+  note?: "0" | "1" | "2" | "3";
 };
 
 export type Terms = {
@@ -290,6 +291,35 @@ export type UNITS_QUERYResult = Array<{
   _createdAt: string;
   _updateAt: null;
 }>;
+// Variable: UNITS_QUERY_BY_ID
+// Query: *[_type == "units" && _id == $id][0] {  _id,  slug,  name,  image,  members[] -> {    _id,    name,    title,    image,    tenCsd,    tenCsdTrucThuoc,    soLyLich,    soTheDang,    gioiTinh,    ngaySinh,    congViecChinhDangLam,    tonGiao,    ngayVaoDang,    ngayVaoDangChinhThuc,    ngayVaoDangLan2,    note  },  description,  _createdAt,  _updateAt }
+export type UNITS_QUERY_BY_IDResult = {
+  _id: string;
+  slug: Slug | null;
+  name: string | null;
+  image: string | null;
+  members: Array<{
+    _id: string;
+    name: string | null;
+    title: Array<string> | null;
+    image: string | null;
+    tenCsd: string | null;
+    tenCsdTrucThuoc: string | null;
+    soLyLich: string | null;
+    soTheDang: string | null;
+    gioiTinh: "Nam" | "N\u1EEF" | null;
+    ngaySinh: string | null;
+    congViecChinhDangLam: string | null;
+    tonGiao: string | null;
+    ngayVaoDang: string | null;
+    ngayVaoDangChinhThuc: string | null;
+    ngayVaoDangLan2: string | null;
+    note: "0" | "1" | "2" | "3" | null;
+  }> | null;
+  description: string | null;
+  _createdAt: string;
+  _updateAt: null;
+} | null;
 
 // Query TypeMap
 import "@sanity/client";
@@ -299,5 +329,6 @@ declare module "@sanity/client" {
     "*[_type == \"news\" && defined(slug.current)] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title\n  },\n  createdAt\n }": NEWS_QUERYResult;
     "*[_type == \"news\" && _id == $id][0] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title, image\n  },\n  _createdAt,\n  description\n }": NEW_QUERY_BY_IDResult;
     "*[_type == \"units\" && defined(slug.current)] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERYResult;
+    "*[_type == \"units\" && _id == $id][0] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2,\n    note\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERY_BY_IDResult;
   }
 }

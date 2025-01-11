@@ -124,7 +124,7 @@ body {
   }
 
   .tag-secondary {
-    @apply bg-white-100 dark:bg-black-100 text-primary dark:text-white-100 px-6 py-3 font-work-sans font-bold text-2xl uppercase relative;
+    @apply bg-white-100 dark:bg-black-100 text-primary text-center md:text-justify dark:text-white-100 px-0 md:px-6 py-3 font-work-sans font-bold text-2xl uppercase relative;
   }
 
   .link-underlined {
@@ -144,11 +144,11 @@ body {
   }
 
   .heading-secondary {
-    @apply uppercase px-4 py-3 font-work-sans font-extrabold text-black dark:text-white-100 text-[36px] leading-[46px] max-w-5xl my-5;
+    @apply uppercase px-0 md:px-4 py-3 font-work-sans font-extrabold text-black dark:text-white-100 text-2xl md:text-[36px] leading-normal md:leading-[46px] max-w-5xl;
   }
 
   .sub-heading {
-    @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
+    @apply font-medium text-[20px] text-black dark:text-white max-w-2xl text-center break-words;
   }
 
   .section_container {

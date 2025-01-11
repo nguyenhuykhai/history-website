@@ -2,16 +2,19 @@ import BannerSection from "@/components/home/organisms/BannerSection";
 import LeaderSection from "@/components/home/organisms/LeaderSection";
 import NewsSection from "@/components/home/organisms/NewsSection";
 import OperationSection from "@/components/home/organisms/OperationSection";
-import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { client } from "@/sanity/lib/client";
+import { SanityLive } from "@/sanity/lib/live";
 import { NEWS_QUERY, TERMS_QUERY, UNITS_QUERY } from "@/sanity/lib/queries";
-import { NEWS_QUERYResult, TERMS_QUERYResult, UNITS_QUERYResult } from "@/sanity/types";
+import { notFound } from "next/navigation";
 
 export const Home = async () => {
-  const { data: terms }: { data: TERMS_QUERYResult } = await sanityFetch({ query: TERMS_QUERY });
-  const { data: news }: { data: NEWS_QUERYResult } = await sanityFetch({
-    query: NEWS_QUERY,
-  });
-  const { data: units } : { data: UNITS_QUERYResult } = await sanityFetch({ query: UNITS_QUERY });
+  const [terms, news, units] = await Promise.all([
+    client.fetch(TERMS_QUERY),
+    client.fetch(NEWS_QUERY),
+    client.fetch(UNITS_QUERY),
+  ]);
+
+  if (!terms || !news || !units) return notFound();
 
   return (
     <>

@@ -23,7 +23,7 @@ const OperationSection = ({ units }: { units: UNITS_QUERYResult }) => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {data.map((item) => (
           <div key={item._id}>
-            <Link href={`/about/${item?._id}`}>
+            <Link href={`/chi-bo/${item?._id}`}>
               <Image
                 className="h-auto max-w-full rounded-lg cursor-pointer hover:scale-105 transition-all duration-300"
                 src={item.image || placeholder500x300}

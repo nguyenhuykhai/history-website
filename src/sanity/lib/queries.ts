@@ -71,3 +71,33 @@ export const UNITS_QUERY = defineQuery(
   _updateAt
  }`
 )
+
+export const UNITS_QUERY_BY_ID = defineQuery(
+  `*[_type == "units" && _id == $id][0] {
+  _id,
+  slug,
+  name,
+  image,
+  members[] -> {
+    _id,
+    name,
+    title,
+    image,
+    tenCsd,
+    tenCsdTrucThuoc,
+    soLyLich,
+    soTheDang,
+    gioiTinh,
+    ngaySinh,
+    congViecChinhDangLam,
+    tonGiao,
+    ngayVaoDang,
+    ngayVaoDangChinhThuc,
+    ngayVaoDangLan2,
+    note
+  },
+  description,
+  _createdAt,
+  _updateAt
+ }`
+)

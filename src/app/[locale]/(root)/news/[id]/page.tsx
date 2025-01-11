@@ -22,12 +22,12 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <section className="section_container !min-h-[230px]">
+      <section className="px-0 py-0 md:px-6 md:pt-10 max-w-7xl mx-auto !min-h-[150px]">
         <p className="tag-secondary">{data.category}</p>
         <h1 className="heading-secondary">{data.title}</h1>
       </section>
 
-      <section className="section_container !pt-0">
+      <section className="p-0 md:px-6 max-w-7xl mx-auto">
         <div className="space-y-5 max-w-4xl mx-auto">
           <div className="flex-between gap-5">
             <Link

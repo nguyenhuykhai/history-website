@@ -34,7 +34,7 @@ export default async function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Header />
             <Navbar />
-            <main className="flex flex-col lg:flex-row gap-4 container mx-auto px-4 py-4 sm:py-6 lg:py-8">
+            <main className="flex flex-col lg:flex-row gap-4 container mx-auto px-4 py-4 sm:py-6 lg:py-8 font-work-sans">
               {/* Mobile Layout (Sidebar above Routes) */}
               <div className="block lg:hidden mb-6">
                 <Sidebar />

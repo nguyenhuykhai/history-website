@@ -94,6 +94,21 @@ export const leader = defineType({
         dateFormat: "DD/MM/YYYY",
       },
     }),
+    defineField({
+      title: "Ghi chú",
+      name: "note",
+      type: "string",
+      options: {
+        layout: "radio",
+        direction: "horizontal",
+        list: [
+          { title: "Bí thư", value: "0" },
+          { title: "Phó bí thư", value: "1" },
+          { title: "Cựu ủy viên", value: "2" },
+          { title: "Thành viên", value: "3" },
+        ],
+      },
+    }),
   ],
   preview: {
     select: {
@@ -101,21 +116,3 @@ export const leader = defineType({
     },
   },
 });
-
-// export type Leader = {
-//   _id: string;
-//   name: string;
-//   title: string[];
-//   image: string;
-//   tenCsd?: string;
-//   tenCsdTrucThuoc?: string;
-//   soLyLich?: string;
-//   soTheDang?: string;
-//   gioiTinh?: string;
-//   ngaySinh?: string;
-//   congViecChinhDangLam?: string;
-//   tonGiao?: string;
-//   ngayVaoDang?: string;
-//   ngayVaoDangChinhThuc?: string;
-//   ngayVaoDangLan2?: string;
-// };

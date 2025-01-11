@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Sidebar = () => {
   return (
-    <aside className="w-full sm:w-full lg:w-64">
+    <aside className="w-full sm:w-full lg:w-64 sticky top-10">
       <div className="bg-white dark:bg-gray-800 shadow rounded p-4 mb-4">
         <div className="flex items-center gap-4">
           <Image
