@@ -1,17 +1,17 @@
 "use client";
 import dynamic from "next/dynamic";
 
-const AboutClient = dynamic(() => import("@/components/about/template/AboutClient"), {
+const CulturalClient = dynamic(() => import("@/components/cultural/template/CulturalClient"), {
   loading: () => <div className="h-96 bg-gray-300 animate-pulse"></div>,
   ssr: false,
 });
 
-const About = () => {
+const Cultural = () => {  
   return (
     <>
-      <AboutClient />
+      <CulturalClient />
     </>
   );
-};
+}
 
-export default About;
+export default Cultural;

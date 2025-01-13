@@ -1,7 +1,4 @@
-import BannerSection from "@/components/home/organisms/BannerSection";
-import LeaderSection from "@/components/home/organisms/LeaderSection";
-import NewsSection from "@/components/home/organisms/NewsSection";
-import OperationSection from "@/components/home/organisms/OperationSection";
+import HomeClient from "@/components/home/template/HomeClient";
 import { client } from "@/sanity/lib/client";
 import { SanityLive } from "@/sanity/lib/live";
 import { NEWS_QUERY, TERMS_QUERY, UNITS_QUERY } from "@/sanity/lib/queries";
@@ -17,18 +14,10 @@ export const Home = async () => {
   if (!terms || !news || !units) return notFound();
 
   return (
-    <>
-      <main className="container mx-auto">
-        <BannerSection />
-        {/* Tin tức */}
-        <NewsSection news={news}/>
-        {/* Ban lãnh đạo */}
-        <LeaderSection terms={terms}/>
-        {/* Tổ chức Đảng */}
-        <OperationSection units={units} />
-      </main>
+    <div>
+      <HomeClient terms={terms} news={news} units={units} />
       <SanityLive />
-    </>
+    </div>
   );
 }
 

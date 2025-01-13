@@ -1,3 +1,4 @@
+"use client";
 import { placeholder500x300 } from "@/assets/image";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";

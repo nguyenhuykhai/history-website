@@ -162,6 +162,7 @@ export type Units = {
     _key: string;
     [internalGroqTypeReferenceTo]?: "leader";
   }>;
+  culture?: Array<string>;
 };
 
 export type Slug = {
@@ -292,7 +293,7 @@ export type UNITS_QUERYResult = Array<{
   _updateAt: null;
 }>;
 // Variable: UNITS_QUERY_BY_ID
-// Query: *[_type == "units" && _id == $id][0] {  _id,  slug,  name,  image,  members[] -> {    _id,    name,    title,    image,    tenCsd,    tenCsdTrucThuoc,    soLyLich,    soTheDang,    gioiTinh,    ngaySinh,    congViecChinhDangLam,    tonGiao,    ngayVaoDang,    ngayVaoDangChinhThuc,    ngayVaoDangLan2,    note  },  description,  _createdAt,  _updateAt }
+// Query: *[_type == "units" && _id == $id][0] {  _id,  slug,  name,  image,  members[] -> {    _id,    name,    title,    image,    tenCsd,    tenCsdTrucThuoc,    soLyLich,    soTheDang,    gioiTinh,    ngaySinh,    congViecChinhDangLam,    tonGiao,    ngayVaoDang,    ngayVaoDangChinhThuc,    ngayVaoDangLan2,    note  },  culture,  description,  _createdAt,  _updateAt }
 export type UNITS_QUERY_BY_IDResult = {
   _id: string;
   slug: Slug | null;
@@ -316,6 +317,7 @@ export type UNITS_QUERY_BY_IDResult = {
     ngayVaoDangLan2: string | null;
     note: "0" | "1" | "2" | "3" | null;
   }> | null;
+  culture: Array<string> | null;
   description: string | null;
   _createdAt: string;
   _updateAt: null;
@@ -329,6 +331,6 @@ declare module "@sanity/client" {
     "*[_type == \"news\" && defined(slug.current)] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title\n  },\n  createdAt\n }": NEWS_QUERYResult;
     "*[_type == \"news\" && _id == $id][0] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title, image\n  },\n  _createdAt,\n  description\n }": NEW_QUERY_BY_IDResult;
     "*[_type == \"units\" && defined(slug.current)] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERYResult;
-    "*[_type == \"units\" && _id == $id][0] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2,\n    note\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERY_BY_IDResult;
+    "*[_type == \"units\" && _id == $id][0] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2,\n    note\n  },\n  culture,\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERY_BY_IDResult;
   }
 }

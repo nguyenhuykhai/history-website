@@ -879,6 +879,16 @@
           }
         },
         "optional": true
+      },
+      "culture": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "array",
+          "of": {
+            "type": "string"
+          }
+        },
+        "optional": true
       }
     }
   },

@@ -8,6 +8,7 @@ export const units = defineType({
   icon: MapPinHouse,
   fields: [
     defineField({
+      title: "Tên chi bộ",
       name: "name",
       type: "string",
     }),
@@ -19,14 +20,17 @@ export const units = defineType({
       },
     }),
     defineField({
+      title: "Mô tả",
       name: "description",
       type: "markdown",
     }),
     defineField({
+      title: "Ảnh đại diện",
       name: "image",
       type: "url",
     }),
     defineField({
+      title: "Danh sách đảng viên",
       name: "members",
       type: "array",
       of: [
@@ -35,6 +39,12 @@ export const units = defineType({
           to: [{ type: "leader" }],
         }
       ],
+    }),
+    defineField({
+      title: "Không gian văn hóa Hồ Chí Minh",
+      name: "culture",
+      type: "array",
+      of: [{type: "string"}],
     }),
   ],
   preview: {

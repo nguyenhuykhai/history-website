@@ -70,7 +70,7 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={workSans.variable}>
         {children}
       </body>

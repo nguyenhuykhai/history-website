@@ -8,7 +8,14 @@ import sliderOne from '@/assets/image/home-page/sliderOne.webp';
 import sliderTwo from '@/assets/image/home-page/sliderTwo.webp';
 import TanXuanLogo from '@/assets/image/home-page/tan-xuan-logo.webp';
 import Facebook from '@/assets/image/social/facebook.svg';
-import backgroundTrongDong from '@/assets/image/background/background-trong-dong.webp'; 
+import backgroundTrongDong from '@/assets/image/background/background-trong-dong.webp';
+import BCHQS from '@/assets/image/about/1-BCHQS.webp';
+import biaTuongNiem from '@/assets/image/about/2-bia-tuong-niem.webp';
+import chuaVanPhuoc from '@/assets/image/about/3-chua-van-phuoc.webp';
+import denThan from '@/assets/image/about/4-den-than-tan-thoi-trung.webp';
+import nhaOngVoVanThu from '@/assets/image/about/5-nha-ong-vo-van-thu.webp';
+import xaTanXuan from '@/assets/image/about/6-xa-Tan-Xuan.webp';
+import tanXuanMap from '@/assets/image/about/7-tanxuan-map.webp';
 
 export {
   banner,
@@ -21,5 +28,12 @@ export {
   sliderTwo,
   TanXuanLogo,
   Facebook,
-  backgroundTrongDong
+  backgroundTrongDong,
+  BCHQS,
+  biaTuongNiem,
+  chuaVanPhuoc,
+  denThan,
+  nhaOngVoVanThu,
+  xaTanXuan,
+  tanXuanMap,
 };

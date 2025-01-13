@@ -28,8 +28,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true}>
         <ThemeProvider defaultTheme={theme} attribute="class">
           <NextIntlClientProvider messages={messages}>
             <Header />

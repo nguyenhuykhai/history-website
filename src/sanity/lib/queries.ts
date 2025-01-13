@@ -96,6 +96,7 @@ export const UNITS_QUERY_BY_ID = defineQuery(
     ngayVaoDangLan2,
     note
   },
+  culture,
   description,
   _createdAt,
   _updateAt

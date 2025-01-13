@@ -1,5 +1,4 @@
 "use client";
-
 import { usePathname, useRouter } from "next/navigation";
 import { Switch } from "@/components/ui/switch";
 import { useTranslations } from "next-intl";

@@ -35,8 +35,8 @@ export function convertFromNoteToText(note: "0" | "1" | "2" | "3" | null) {
     case "2":
       return "Cựu ủy viên";
     case "3":
-      return "Thành viên";
+      return "Đảng viên";
     default:
-      return "Thành viên";
+      return "Đảng viên";
   }
 }
