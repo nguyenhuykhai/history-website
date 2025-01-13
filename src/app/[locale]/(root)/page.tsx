@@ -4,7 +4,7 @@ import { SanityLive } from "@/sanity/lib/live";
 import { NEWS_QUERY, TERMS_QUERY, UNITS_QUERY } from "@/sanity/lib/queries";
 import { notFound } from "next/navigation";
 
-export const Home = async () => {
+export default async function Home() {
   const [terms, news, units] = await Promise.all([
     client.fetch(TERMS_QUERY),
     client.fetch(NEWS_QUERY),
@@ -20,5 +20,3 @@ export const Home = async () => {
     </div>
   );
 }
-
-export default Home;
