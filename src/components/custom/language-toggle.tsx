@@ -1,11 +1,10 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
 import { Switch } from "@/components/ui/switch";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export function LanguageToggle() {
   const t = useTranslations("Language");
-  const router = useRouter();
   const pathname = usePathname();
   
   // Get current locale from URL path
@@ -15,11 +14,11 @@ export function LanguageToggle() {
     // Get the new locale
     const newLocale = currentLocale === 'en' ? 'vi' : 'en';
     
-    // Get the path after the locale
-    const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
+    // Construct the new URL
+    const newUrl = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
     
-    // Navigate to the new path
-    router.push(newPath);
+    // Reload the page with the new locale
+    window.location.href = newUrl;
   };
 
   return (
