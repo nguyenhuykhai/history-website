@@ -4,10 +4,12 @@ import Member, { MembersProps } from "@/components/units/organisms/Member";
 import UnitCarousel from "@/components/units/organisms/UnitCarousel";
 import { sortMembers } from "@/lib/utils";
 import { UNITS_QUERY_BY_IDResult } from "@/sanity/types";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const UnitsClient = ({ unit }: { unit: UNITS_QUERY_BY_IDResult }) => {
+  const t = useTranslations("Units");
   return (
     <>
       <section className="section_container !px-0 !pt-0">
@@ -30,12 +32,12 @@ const UnitsClient = ({ unit }: { unit: UNITS_QUERY_BY_IDResult }) => {
       </section>
 
       <h2 className="py-3 uppercase font-bold text-black dark:text-white-100 text-2xl leading-normal">
-        Không gian văn hóa Hồ Chí Minh của chi bộ
+        {t("title")}
       </h2>
-      <UnitCarousel culture={unit?.culture} />
+      <UnitCarousel culture={unit?.culture} t={t} />
 
       <h2 className="py-3 uppercase font-bold text-black dark:text-white-100 text-2xl leading-normal">
-        Danh sách thành viên
+        {t("list")}
       </h2>
       <ul className="card_grid-sm">
         {unit?.members &&

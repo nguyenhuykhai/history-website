@@ -5,7 +5,12 @@ import { UNITS_QUERYResult } from "@/sanity/types";
 import { placeholder500x300 } from "@/assets/image";
 import { Link } from "@/i18n/routing";
 
-const OperationSection = ({ units }: { units: UNITS_QUERYResult }) => {
+type OperationSectionProps = {
+  units: UNITS_QUERYResult;
+  t: (key: string) => string;
+}
+
+const OperationSection: React.FC<OperationSectionProps> = ({ units, t }) => {
   const [data, setData] = useState<UNITS_QUERYResult>([]);
 
   useEffect(() => {
@@ -16,8 +21,8 @@ const OperationSection = ({ units }: { units: UNITS_QUERYResult }) => {
 
   return (
     <section>
-      <h2 className="text-xl font-bold bg-red-800 text-white p-2 mb-4">
-        CÁC CHI BỘ TRỰC THUỘC
+      <h2 className="uppercase text-xl font-bold bg-red-800 text-white p-2 mb-4">
+        {t("sectionThree")}
       </h2>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

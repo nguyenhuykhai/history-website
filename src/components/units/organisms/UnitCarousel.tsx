@@ -8,11 +8,12 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import React, { useRef } from "react";
 
-const UnitCarousel = ({
-  culture,
-}: {
+type UnitCarouselProps = {
   culture: Array<string> | null | undefined;
-}) => {
+  t: (key: string) => string;
+};
+
+const UnitCarousel: React.FC<UnitCarouselProps> = ({ culture, t }) => {
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
 
   return (
@@ -34,7 +35,9 @@ const UnitCarousel = ({
           </CarouselContent>
         </Carousel>
       ) : (
-        <p className="text-justify text-lg text-black dark:text-white">Không có dữ liệu</p>
+        <p className="text-justify text-lg text-black dark:text-white">
+          {t("noData")}
+        </p>
       )}
     </>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { NEWS_QUERYResult, TERMS_QUERYResult, UNITS_QUERYResult } from "@/sanity/types";
+import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 
 const BannerSection = dynamic(() => import("@/components/home/organisms/BannerSection"), {
@@ -27,15 +28,17 @@ type HomeClientProps = {
 }
 
 const HomeClient: React.FC<HomeClientProps> = ({ terms, news, units }) => {
+  const t = useTranslations("Home");
+
   return (
     <main className="container mx-auto">
       <BannerSection />
       {/* Tin tức */}
-      <NewsSection news={news} />
+      <NewsSection news={news} t={t} />
       {/* Ban lãnh đạo */}
-      <LeaderSection terms={terms} />
+      <LeaderSection terms={terms} t={t} />
       {/* Tổ chức Đảng */}
-      <OperationSection units={units} />
+      <OperationSection units={units} t={t} />
     </main>
   );
 };

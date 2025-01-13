@@ -1,29 +1,58 @@
 {
-    "Navigation": {
-      "home": "Trang chủ",
-      "about": "Giới thiệu",
-      "news": "Tin tức",
-      "cultural": "Không gian văn hóa Hồ Chí Minh",
-      "contact": "Liên hệ",
-      "language": "Chọn ngôn ngữ",
-      "theme": "Đổi chủ đề"
-    },
-    "Home": {
-      "title": "Chào mừng đến với Website"
-    },
-    "About": {
-      "title": "Về chúng tôi"
-    },
-    "News": {
-      "title": "Tin tức mới nhất"
-    },
-    "Services": {
-      "title": "Dịch vụ của chúng tôi"
-    },
-    "Contact": {
-      "title": "Liên hệ với chúng tôi"
-    },
-    "Language": {
-      "switch_language": "Tiếng Anh"
-    }
-  } 
+  "Navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "news": "Tin tức",
+    "cultural": "Không gian văn hóa Hồ Chí Minh",
+    "contact": "Liên hệ",
+    "language": "Chọn ngôn ngữ",
+    "theme": "Đổi chủ đề"
+  },
+  "Home": {
+    "title": "Chào mừng đến với Website",
+    "sectionOne": "Hoạt động nổi bật",
+    "sectionTwo": "Ban chấp hành Đảng bộ xã qua các nhiệm kỳ",
+    "sectionThree": "Các chi bộ trực thuộc"
+  },
+  "Sidebar": {
+    "titleOne": "Thực hiện bởi Đoàn",
+    "titleTwo": "Hội LHTN xã Tân Xuân",
+    "facebook": "Fanpage xã Tân Xuân",
+    "websites": "Liên kết website",
+    "select": "Chọn trang liên kết"
+  },
+  "About": {
+    "title": "Giới thiệu",
+    "paragraphOne": "Xã Tân Xuân có vị trí gần khu vực trung tâm của huyện Hóc Môn, tiếp giáp với các xã trong huyện, cụ thể: Phía Đông Bắc giáp Thị trấn Hóc Môn, giáp xã Thới Tam Thôn (ranh giới là đường Tô Ký); phía Đông Nam giáp xã Trung Chánh (ranh tuyến đường liên xã Tân Xuân - Trung Chánh); phía Tây Bắc giáp thị trấn Hóc Môn (ranh giới là đường Bà Triệu); phía Tây Nam giáp xã Xuân Thới Đông (ranh giới là quốc lộ 22)",
+    "paragraphTwo": "Sau ngày miền Nam hoàn toàn giải phóng, Đảng bộ và quân dân xã Tân Xuân tiếp tục phát huy truyền thống cách mạng trong việc khắc phục hậu quả nặng nề của chiến tranh, tạo dựng cuộc sống mới tươi đẹp trên vùng đất một thời bị bom đạn của Pháp, Mỹ hủy diệt.",
+    "scene": "Khung cảnh Tân Xuân",
+    "map": "Bản đồ Tân Xuân",
+    "BCHQS": "Trụ sở Ban Chỉ huy Quân sự xã",
+    "biaTuongNiem": "Nhà bia ghi danh liệt sĩ trên địa bàn",
+    "chuaVanPhuoc": "Địa chỉ đỏ Chùa Vạn Phước",
+    "denThan": "Địa chỉ đỏ Đình thần Tân Thới Trung",
+    "nhaOngVoVanThu": "Địa chỉ đỏ nhà ông Võ Văn Thu",
+    "xaTanXuan": "Xã Tân Xuân"
+  },
+  "Units": {
+    "title": "Không gian văn hóa Hồ Chí Minh",
+    "list": "Danh sách thành viên",
+    "noData": "Không có dữ liệu"
+  },
+  "Cultural": {
+    "title": "Không gian văn hóa Hồ Chí Minh",
+    "content": "Trân trọng giới thiệu những tác phẩm của Chủ tịch Hồ Chí Minh và những tác phẩm viết về Người, về cuộc đời, các quan điểm, lối sống,... mà mọi thế hệ người dân Việt Nam nên bảo tồn, lưu truyền và học tập",
+    "btn": "Đọc ngay"
+  },
+  "Contact": {
+    "title": "Liên hệ với chúng tôi"
+  },
+  "Language": {
+    "switch_language": "Tiếng Anh"
+  },
+  "Footer": {
+    "title": "Đảng bộ huyện Hóc Môn",
+    "address": "Địa chỉ: Số 122, đường Lê Thị Hà, Ấp 2, xã Tân Xuân, huyện Hóc Môn",
+    "phone": "Điện thoại: 028.3891.0429"
+  }
+}

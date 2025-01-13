@@ -17,31 +17,31 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import React, { useRef } from "react";
 
-const AboutCarousel = () => {
+const AboutCarousel = ({ t } : { t: (key: string) => string }) => {
   const data = [
     {
       img: BCHQS,
-      title: "Trụ sở Ban Chỉ huy Quân sự xã"
+      title: t("BCHQS")
     },
     {
       img: biaTuongNiem,
-      title: "Nhà bia ghi danh liệt sĩ trên địa bàn"
+      title: t("biaTuongNiem")
     },
     {
       img: chuaVanPhuoc,
-      title: "Địa chỉ đỏ Chùa Vạn Phước"
+      title: t("chuaVanPhuoc")
     },
     {
       img: denThan,
-      title: "Địa chỉ đỏ Đình thần Tân Thới Trung"
+      title: t("denThan")
     },
     {
       img: nhaOngVoVanThu,
-      title: "Địa chỉ đỏ nhà ông Võ Văn Thu"
+      title: t("nhaOngVoVanThu")
     },
     {
       img: xaTanXuan,
-      title: "Xã Tân Xuân"
+      title: t("xaTanXuan")
     },
   ];
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
