@@ -16,7 +16,7 @@ const Header = () => {
         <p className="uppercase text-xs sm:text-xs md:text-xl lg:text-2xl py-1 sm:py-2 md:py-3">
           {t("textTwo")}
         </p>
-        <p className="uppercase text-base sm:text-base md:text-2xl lg:text-3xl text-yellow-200 font-bold py-1 sm:py-2 md:py-3">
+        <p className="uppercase text-base md:text-2xl lg:text-4xl text-yellow-200 font-bold py-1 sm:py-2 md:py-3">
           {t("textThree")}
         </p>
       </div>
