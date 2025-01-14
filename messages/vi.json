@@ -1,10 +1,16 @@
 {
+  "Banner": {
+    "textOne": "Đảng bộ xã Tân Xuân",
+    "textTwo": "Ban chấp hành đảng bộ xã Tân Xuân",
+    "textThree": "Lịch sử Đảng bộ xã Tân Xuân giai đoạn 2000 - 2020"
+  },
   "Navigation": {
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "news": "Tin tức",
     "cultural": "Không gian văn hóa Hồ Chí Minh",
     "contact": "Liên hệ",
+    "history": "Lịch sử Đảng bộ",
     "language": "Chọn ngôn ngữ",
     "theme": "Đổi chủ đề"
   },
@@ -34,6 +40,12 @@
     "nhaOngVoVanThu": "Địa chỉ đỏ nhà ông Võ Văn Thu",
     "xaTanXuan": "Xã Tân Xuân"
   },
+  "History": {
+    "title": "Lịch sử Đảng bộ xã Tân Xuân",
+    "description": "Một cổng thông tin trực quan, tổng hợp các mốc son lịch sử quan trọng trong hành trình phát triển và đóng góp của Đảng bộ và nhân dân xã Tân Xuân qua các thời kỳ. Từ những năm tháng đấu tranh giành độc lập dân tộc (1930–1975), giai đoạn xây dựng xã hội chủ nghĩa (1975–2000), đến các thành tựu nổi bật trong công cuộc phát triển kinh tế - xã hội và xây dựng nông thôn mới (2000–2020). Trang này không chỉ ghi nhận công lao của các thế hệ đi trước mà còn là nguồn tư liệu quý giá nhằm giáo dục truyền thống cách mạng, truyền cảm hứng tự hào và ý chí phát triển mạnh mẽ cho thế hệ trẻ hôm nay và mai sau",
+    "btn": "Xem toàn bộ tài liệu",
+    "note": "Tóm tắt từ tài liệu chính"
+  },
   "Units": {
     "title": "Không gian văn hóa Hồ Chí Minh",
     "list": "Danh sách thành viên",
@@ -45,13 +57,19 @@
     "btn": "Đọc ngay"
   },
   "Contact": {
-    "title": "Liên hệ với chúng tôi"
+    "title": "Thông tin liên hệ",
+    "description": "Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào",
+    "addressLabel": "Địa chỉ",
+    "addressInfo": "Số 122, đường Lê Thị Hà, Ấp 2, xã Tân Xuân, huyện Hóc Môn",
+    "phoneLabel": "Điện thoại",
+    "timeLabel": "Thời gian làm việc",
+    "timeInfo": "Từ thứ hai đến thứ sáu (7:00 AM - 5:00 PM)"
   },
   "Language": {
     "switch_language": "Tiếng Anh"
   },
   "Footer": {
-    "title": "Đảng bộ huyện Hóc Môn",
+    "title": "Đảng bộ xã Tân Xuân",
     "address": "Địa chỉ: Số 122, đường Lê Thị Hà, Ấp 2, xã Tân Xuân, huyện Hóc Môn",
     "phone": "Điện thoại: 028.3891.0429"
   }

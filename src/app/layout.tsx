@@ -56,7 +56,7 @@ const workSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Đảng bộ huyện Hóc Môn",
+  title: "Đảng bộ xã Tân Xuân",
   description: "Lịch sử Đảng bộ xã Tân Xuân giai đoạn 2000 - 2020",
   icons: {
     icon: logo.src,

@@ -1,58 +1,76 @@
 {
-    "Navigation": {
-      "home": "Home",
-      "about": "About",
-      "news": "News",
-      "cultural": "Ho Chi Minh Cultural Space",
-      "contact": "Contact",
-      "language": "Choose a language",
-      "theme": "Switch theme"
-    },
-    "Home": {
-      "title": "Welcome to Our Website",
-      "sectionOne": "Featured Activities",
-      "sectionTwo": "Commune Party Committee through terms",
-      "sectionThree": "Subordinate Party cells"
-    },
-    "Sidebar": {
-      "titleOne": "Implemented by the Youth Union",
-      "titleTwo": "Commune Youth Union of Tan Xuan",
-      "facebook": "Tan Xuan Commune Fanpage",
-      "websites": "website links",
-      "select":"Select the link page"
-    },
-    "About": {
-      "title": "About Tan Xuan Commune",
-      "paragraphOne": "Tan Xuan Commune is located near the central area of Hoc Mon District, adjacent to communes in the district, specifically: Northeast borders Hoc Mon Town, borders Thoi Tam Thon commune (the border is To Ky street); Southeast borders Trung Chanh commune (the border is the road connecting Tan Xuan - Trung Chanh communes); Northwest borders Hoc Mon Town (the border is Ba Trieu street); Southwest borders Xuan Thoi Dong commune (the border is National Highway 22)",
-      "paragraphTwo": "After the South was completely liberated, the Party Committee and people of Tan Xuan Commune continued to promote the revolutionary tradition in overcoming the heavy consequences of the war, building a new beautiful life on the land once bombed by the French and American invaders.",
-      "scene": "Tan Xuan Scene",
-      "map": "Tan Xuan Map",
-      "BCHQS": "Commune Military Command Headquarters",
-      "biaTuongNiem": "Monument house honoring martyrs in the area",
-      "chuaVanPhuoc": "Address of Van Phuoc Pagoda",
-      "denThan": "Address of Tân Thới Trung Temple",
-      "nhaOngVoVanThu": "Address of Mr. Vo Van Thu's house",
-      "xaTanXuan": "Tan Xuan Commune"
-    },
-    "Units": {
-      "title": "Ho Chi Minh Cultural Space",
-      "list": "List of members",
-      "noData": "No data"
-    },
-    "Cultural": {
-      "title": "Ho Chi Minh Cultural Space",
-      "content": "We are honored to introduce the works of President Ho Chi Minh and the works written about Him, about His life, His views, His lifestyle,... that every generation of Vietnamese people should preserve, pass on and learn",
-      "btn": "Read now"
-    },
-    "Contact": {
-      "title": "Contact Us"
-    },
-    "Language": {
-      "switch_language": "Vietnamese"
-    },
-    "Footer": {
-      "title": "Hoc Mon District Party Committee",
-      "address": "Address: No. 122, Le Thi Ha Street, Ap 2, Tan Xuan Commune, Hoc Mon District",
-      "phone": "Phone: 028.3891.0429"
-    }
-  } 
+  "Banner": {
+    "textOne": "Tan Xuan Commune Party Committee",
+    "textTwo": "Tan Xuan Commune Party Committee Executive Board",
+    "textThree": "History of Tan Xuan Commune Party Committee 2000 - 2020"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "news": "News",
+    "cultural": "Ho Chi Minh Cultural Space",
+    "contact": "Contact",
+    "history": "History",
+    "language": "Choose a language",
+    "theme": "Switch theme"
+  },
+  "Home": {
+    "title": "Welcome to Our Website",
+    "sectionOne": "Featured Activities",
+    "sectionTwo": "Commune Party Committee through terms",
+    "sectionThree": "Subordinate Party cells"
+  },
+  "Sidebar": {
+    "titleOne": "Implemented by the Youth Union",
+    "titleTwo": "Commune Youth Union of Tan Xuan",
+    "facebook": "Tan Xuan Commune Fanpage",
+    "websites": "website links",
+    "select": "Select the link page"
+  },
+  "About": {
+    "title": "About Tan Xuan Commune",
+    "paragraphOne": "Tan Xuan Commune is located near the central area of Hoc Mon District, adjacent to communes in the district, specifically: Northeast borders Hoc Mon Town, borders Thoi Tam Thon commune (the border is To Ky street); Southeast borders Trung Chanh commune (the border is the road connecting Tan Xuan - Trung Chanh communes); Northwest borders Hoc Mon Town (the border is Ba Trieu street); Southwest borders Xuan Thoi Dong commune (the border is National Highway 22)",
+    "paragraphTwo": "After the South was completely liberated, the Party Committee and people of Tan Xuan Commune continued to promote the revolutionary tradition in overcoming the heavy consequences of the war, building a new beautiful life on the land once bombed by the French and American invaders.",
+    "scene": "Tan Xuan Scene",
+    "map": "Tan Xuan Map",
+    "BCHQS": "Commune Military Command Headquarters",
+    "biaTuongNiem": "Monument house honoring martyrs in the area",
+    "chuaVanPhuoc": "Address of Van Phuoc Pagoda",
+    "denThan": "Address of Tân Thới Trung Temple",
+    "nhaOngVoVanThu": "Address of Mr. Vo Van Thu's house",
+    "xaTanXuan": "Tan Xuan Commune"
+  },
+  "History": {
+    "title": "History of the Party Committee of Tan Xuan Commune",
+    "description": "An interactive portal that summarizes the important historical milestones in the development and contributions of the Party Committee and the people of Tan Xuan Commune throughout various periods. From the years of struggle for national independence (1930–1975), the period of building socialism (1975–2000), to the significant achievements in socio-economic development and new rural construction (2000–2020). This page not only acknowledges the contributions of previous generations but also serves as a valuable resource for educating revolutionary traditions, inspiring pride, and fostering a strong development spirit for today's and future generations.",
+    "btn": "View the full document",
+    "note": "Summary from the main document"
+  },
+  "Units": {
+    "title": "Ho Chi Minh Cultural Space",
+    "list": "List of members",
+    "noData": "No data"
+  },
+  "Cultural": {
+    "title": "Ho Chi Minh Cultural Space",
+    "content": "We are honored to introduce the works of President Ho Chi Minh and the works written about Him, about His life, His views, His lifestyle,... that every generation of Vietnamese people should preserve, pass on and learn",
+    "btn": "Read now"
+  },
+  "Contact": {
+    "title": "Contact Information",
+    "description": "We are always ready to listen and support you. Please contact us if you have any questions or requests",
+    "addressLabel": "Address",
+    "addressInfo": "No. 122, Le Thi Ha Street, Hamlet 2, Tan Xuan Commune, Hoc Mon District",
+    "phoneLabel": "Phone",
+    "timeLabel": "Working hours",
+    "timeInfo": "From Monday to Friday (7:00 AM - 5:00 PM)"
+  },
+  "Language": {
+    "switch_language": "Vietnamese"
+  },
+  "Footer": {
+    "title": "Hoc Mon District Party Committee",
+    "address": "Address: No. 122, Le Thi Ha Street, Ap 2, Tan Xuan Commune, Hoc Mon District",
+    "phone": "Phone: 028.3891.0429"
+  }
+}
