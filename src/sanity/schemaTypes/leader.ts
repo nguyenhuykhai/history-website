@@ -104,7 +104,7 @@ export const leader = defineType({
         list: [
           { title: "Bí thư", value: "0" },
           { title: "Phó bí thư", value: "1" },
-          { title: "Cựu ủy viên", value: "2" },
+          { title: "Chi ủy viên", value: "2" },
           { title: "Thành viên", value: "3" },
         ],
       },

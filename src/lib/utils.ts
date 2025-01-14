@@ -33,7 +33,7 @@ export function convertFromNoteToText(note: "0" | "1" | "2" | "3" | null) {
     case "1":
       return "Phó bí thư";
     case "2":
-      return "Cựu ủy viên";
+      return "Chi ủy viên";
     case "3":
       return "Đảng viên";
     default:
