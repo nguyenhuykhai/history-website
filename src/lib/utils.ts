@@ -12,7 +12,7 @@ export function formatDate(date: string | null) {
   return `${day}/${month}/${year}`;
 }
 
-export function formatDateTime(date: string | null) {
+export function formatDateTime(date: string | null | undefined) {
   if (!date) return "";
   const [year, month, day] = date.split("T")[0].split("-");
   return `${day}/${month}/${year}`;
@@ -39,4 +39,8 @@ export function convertFromNoteToText(note: "0" | "1" | "2" | "3" | null) {
     default:
       return "Đảng viên";
   }
+}
+
+export function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

@@ -8,6 +8,7 @@ export const news = defineType({
   icon: Newspaper,
   fields: [
     defineField({
+      title: "Tiêu đề",
       name: "title",
       type: "string",
     }),
@@ -19,25 +20,30 @@ export const news = defineType({
       },
     }),
     defineField({
+      title: "Ảnh tin tức",
       name: "image",
       type: "url",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      title: "Phân loại",
       name: "category",
       type: "string",
       validation: (Rule) => Rule.min(3).max(20),
     }),
     defineField({
+      title: "Nội dung",
       name: "description",
       type: "markdown",
     }),
     defineField({
+      title: "Tác giả",
       name: "author",
       type: "reference",
       to: [{ type: "leader" }],
     }),
     defineField({
+      title: "Ngày tạo",
       name: "createdAt",
       type: "date",
       validation: (Rule) => Rule.required(),

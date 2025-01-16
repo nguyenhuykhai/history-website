@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
-import logo from "../assets/image/background/co-dang.webp";
 import "./globals.css";
-import 'easymde/dist/easymde.min.css'
+import "easymde/dist/easymde.min.css";
 
 const workSans = localFont({
   src: [
@@ -55,25 +53,14 @@ const workSans = localFont({
   variable: "--font-work-sans",
 });
 
-export const metadata: Metadata = {
-  title: "Đảng bộ xã Tân Xuân",
-  description: "Lịch sử Đảng bộ xã Tân Xuân giai đoạn 2000 - 2020",
-  icons: {
-    icon: logo.src,
-  },
-};
-
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={workSans.variable}>
-        {children}
-      </body>
+      <body className={workSans.variable}>{children}</body>
     </html>
   );
 }

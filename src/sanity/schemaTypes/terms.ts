@@ -8,18 +8,17 @@ export const terms = defineType({
   icon: Flag,
   fields: [
     defineField({
-      name: "id",
-      type: "number"
-    }),
-    defineField({
+      title: "Tên nhiệm kỳ",
       name: "name",
       type: "text",
     }),
     defineField({
+      title: "Mô tả",
       name: "description",
       type: "markdown",
     }),
     defineField({
+      title: "Danh sách lãnh đạo",
       name: "data",
       type: "array",
       of: [

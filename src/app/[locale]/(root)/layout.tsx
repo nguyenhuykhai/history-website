@@ -5,10 +5,10 @@ import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { Navbar } from "@/components/custom/navbar";
-import Header from "@/components/custom/header";
-import Footer from "@/components/custom/footer";
-import Sidebar from "@/components/custom/sidebar";
+import Header from "@/components/custom/Header";
+import { Navbar } from "@/components/custom/Navbar";
+import Sidebar from "@/components/custom/Sidebar";
+import Footer from "@/components/custom/Footer";
 
 export default async function LocaleLayout({
   children,

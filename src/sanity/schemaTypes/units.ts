@@ -20,6 +20,11 @@ export const units = defineType({
       },
     }),
     defineField({
+      title: "Thứ tự hiển thị",
+      name: "level",
+      type: "number"
+    }),
+    defineField({
       title: "Mô tả",
       name: "description",
       type: "markdown",

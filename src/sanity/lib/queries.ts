@@ -44,7 +44,7 @@ export const NEW_QUERY_BY_ID = defineQuery(
 )
 
 export const UNITS_QUERY = defineQuery(
-  `*[_type == "units" && defined(slug.current)] {
+  `*[_type == "units" && defined(slug.current)] | order(level asc) {
   _id,
   slug,
   name,

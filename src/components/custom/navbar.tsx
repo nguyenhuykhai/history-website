@@ -4,8 +4,8 @@ import { Link } from "@/i18n/routing";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { LanguageToggle } from "./language-toggle";
-import { ThemeToggle } from "./theme-toggle";
+import { LanguageToggle } from "./LanguageToggle";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const t = useTranslations("Navigation");
