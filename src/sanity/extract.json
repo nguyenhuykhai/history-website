@@ -822,6 +822,13 @@
         },
         "optional": true
       },
+      "level": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "number"
+        },
+        "optional": true
+      },
       "description": {
         "type": "objectAttribute",
         "value": {
@@ -1129,13 +1136,6 @@
         "value": {
           "type": "string"
         }
-      },
-      "id": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "number"
-        },
-        "optional": true
       },
       "name": {
         "type": "objectAttribute",

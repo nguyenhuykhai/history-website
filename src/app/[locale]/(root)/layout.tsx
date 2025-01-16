@@ -7,8 +7,8 @@ import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import Header from "@/components/custom/Header";
 import { Navbar } from "@/components/custom/Navbar";
-import Sidebar from "@/components/custom/Sidebar";
 import Footer from "@/components/custom/Footer";
+import Sidebar from "@/components/custom/Sidebar";
 
 export default async function LocaleLayout({
   children,

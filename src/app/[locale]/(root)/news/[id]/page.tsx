@@ -17,8 +17,8 @@ const NewsClient = dynamic(
 
 const md = markdownit();
 
-const NewDetail = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
 
   const data: NEW_QUERY_BY_IDResult = await client.fetch(NEW_QUERY_BY_ID, {
     id,

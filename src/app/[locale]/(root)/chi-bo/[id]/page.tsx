@@ -1,9 +1,10 @@
-import LoadingComponent from "@/components/custom/LoadingComponent";
+
 import { client } from "@/sanity/lib/client";
 import { UNITS_QUERY_BY_ID } from "@/sanity/lib/queries";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import logo from "@/assets/image/background/co-dang.webp";
+import LoadingComponent from "@/components/custom/LoadingComponent";
 
 const UnitsClient = dynamic(
   () => import("@/components/units/template/UnitsClient"),
@@ -12,8 +13,8 @@ const UnitsClient = dynamic(
   }
 );
 
-const UnitDetail = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const UnitDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
 
   const unit = await client.fetch(UNITS_QUERY_BY_ID, { id });
 

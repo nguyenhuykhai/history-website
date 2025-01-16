@@ -153,6 +153,7 @@ export type Units = {
   _rev: string;
   name?: string;
   slug?: Slug;
+  level?: number;
   description?: string;
   image?: string;
   members?: Array<{
@@ -200,7 +201,6 @@ export type Terms = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  id?: number;
   name?: string;
   description?: string;
   data?: Array<{
@@ -265,7 +265,7 @@ export type NEW_QUERY_BY_IDResult = {
   description: string | null;
 } | null;
 // Variable: UNITS_QUERY
-// Query: *[_type == "units" && defined(slug.current)] {  _id,  slug,  name,  image,  members[] -> {    _id,    name,    title,    image,    tenCsd,    tenCsdTrucThuoc,    soLyLich,    soTheDang,    gioiTinh,    ngaySinh,    congViecChinhDangLam,    tonGiao,    ngayVaoDang,    ngayVaoDangChinhThuc,    ngayVaoDangLan2  },  description,  _createdAt,  _updateAt }
+// Query: *[_type == "units" && defined(slug.current)] | order(level asc) {  _id,  slug,  name,  image,  members[] -> {    _id,    name,    title,    image,    tenCsd,    tenCsdTrucThuoc,    soLyLich,    soTheDang,    gioiTinh,    ngaySinh,    congViecChinhDangLam,    tonGiao,    ngayVaoDang,    ngayVaoDangChinhThuc,    ngayVaoDangLan2  },  description,  _createdAt,  _updateAt }
 export type UNITS_QUERYResult = Array<{
   _id: string;
   slug: Slug | null;
@@ -330,7 +330,7 @@ declare module "@sanity/client" {
     "*[_type == \"terms\"] | order(_createdAt asc) {\n  _id,\n  name,\n  description,\n  data[] -> {\n    name, _id, title, image\n  },\n  _createdAt,\n  _updatedAt,\n }": TERMS_QUERYResult;
     "*[_type == \"news\" && defined(slug.current)] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title\n  },\n  createdAt\n }": NEWS_QUERYResult;
     "*[_type == \"news\" && _id == $id][0] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title, image\n  },\n  _createdAt,\n  description\n }": NEW_QUERY_BY_IDResult;
-    "*[_type == \"units\" && defined(slug.current)] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERYResult;
+    "*[_type == \"units\" && defined(slug.current)] | order(level asc) {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERYResult;
     "*[_type == \"units\" && _id == $id][0] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2,\n    note\n  },\n  culture,\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERY_BY_IDResult;
   }
 }

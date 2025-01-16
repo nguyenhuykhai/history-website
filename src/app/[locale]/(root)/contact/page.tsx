@@ -1,7 +1,8 @@
-import LoadingComponent from "@/components/custom/LoadingComponent";
+
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import logo from "@/assets/image/background/co-dang.webp";
+import LoadingComponent from "@/components/custom/LoadingComponent";
 
 export const metadata: Metadata = {
   title: "Liên hệ Đảng bộ xã Tân Xuân - Hỗ trợ và giải đáp",
