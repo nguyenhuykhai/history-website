@@ -15,10 +15,10 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: "en" | "vi" };
+  params: { locale: "vi" | "en" };
 }) {
   const cookieStore = await cookies();
-  const theme = cookieStore.get("theme")?.value || "system";
+  const theme = cookieStore.get("theme")?.value || "light";
   const { locale } = await params;
 
   if (!routing.locales.includes(locale)) {

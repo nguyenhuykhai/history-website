@@ -59,7 +59,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="vi" suppressHydrationWarning={true}>
       <body className={workSans.variable}>{children}</body>
     </html>
   );
