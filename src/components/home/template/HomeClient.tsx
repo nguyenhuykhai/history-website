@@ -50,7 +50,7 @@ const HomeClient: React.FC<HomeClientProps> = ({ terms, news, units }) => {
   const t = useTranslations("Home");
 
   return (
-    <main className="container mx-auto">
+    <main id="home-client" className="container mx-auto">
       <BannerSection />
       {/* Tin tức */}
       <NewsSection news={news} t={t} />

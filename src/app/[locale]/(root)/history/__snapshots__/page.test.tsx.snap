@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History Page renders the HistoryClient component 1`] = `<History />`;

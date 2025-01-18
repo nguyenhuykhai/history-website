@@ -24,7 +24,7 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
     id,
   });
 
-  if (!data) return notFound();
+  if (!data || !data._id) return notFound();
 
   const parsedContent = md.render(data?.description || "");
 

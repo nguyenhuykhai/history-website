@@ -1,3 +1,4 @@
+"use client";
 import LeaderSectionPart from "@/components/home/organisms/LeaderSectionPart";
 import { TERMS_QUERYResult } from "@/sanity/types";
 
