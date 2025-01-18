@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import "easymde/dist/easymde.min.css";
+import Script from "next/script";
 
 const workSans = localFont({
   src: [
@@ -60,6 +61,25 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="vi" suppressHydrationWarning={true}>
+      <head>
+        {/* Thêm mã Google Analytics */}
+        <Script
+          strategy="afterInteractive" // Tải script sau khi trang tải xong
+          src={`https://www.googletagmanager.com/gtag/js?id=G-4H5EN8383D`}
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4H5EN8383D');
+            `,
+          }}
+        />
+      </head>
       <body className={workSans.variable}>{children}</body>
     </html>
   );
