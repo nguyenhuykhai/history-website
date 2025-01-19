@@ -25,7 +25,7 @@ const ListLeader: React.FC<ListLeaderProps> = ({ leaders }) => {
             alt={leader.name || "Leader"}
             width={150}
             height={150}
-            className="w-20 h-20 mx-auto rounded-full mb-1"
+            className="w-20 h-24 mx-auto rounded-lg mb-1 object-fill drop-shadow-lg"
           />
           <cite className="font-medium text-gray-900 dark:text-white">
             {leader.name}
