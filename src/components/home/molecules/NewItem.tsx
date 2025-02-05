@@ -1,7 +1,13 @@
 "use client";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 import { placeholder500x300 } from "@/assets/image";
 import { Badge } from "@/components/ui/badge";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Link } from "@/i18n/routing";
 import { formatDate } from "@/lib/utils";
 import { Slug } from "@/sanity/types";
@@ -21,14 +27,16 @@ export type NewItemProps = {
     title: Array<string> | null;
   } | null;
   createdAt: string | null;
-}
+};
 
-const NewItem= ({ item } : { item : NewItemProps }) => {
+const NewItem = ({ item }: { item: NewItemProps }) => {
   return (
     <div className="flex flex-col md:flex-row bg-white dark:bg-gray-800 p-3 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
       <Link href={`/news/${item._id}`}>
         <div className="w-full md:w-24 h-auto md:h-24 mr-0 mb-2 md:mb-0 md:mr-4">
           <Image
+            placeholder="blur"
+            blurDataURL={img150x150}
             src={item.image || placeholder500x300}
             alt={item.title || "Article"}
             width={800}
@@ -63,9 +71,7 @@ const NewItem= ({ item } : { item : NewItemProps }) => {
             </Tooltip>
           </TooltipProvider>
         </Link>
-        <p className="link-underlined">
-          Tác giả: {item?.author?.name}
-        </p>
+        <p className="link-underlined">Tác giả: {item?.author?.name}</p>
       </div>
     </div>
   );

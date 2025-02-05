@@ -23,6 +23,7 @@ import {
 } from "../../ui/tooltip";
 import { Link } from "@/i18n/routing";
 import NewItem, { NewItemProps } from "@/components/home/molecules/NewItem";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 
 const NewsSectionPart = ({ newsData }: { newsData: NEWS_QUERYResult }) => {
   const [data, setData] = useState<NEWS_QUERYResult>([]);
@@ -63,20 +64,25 @@ const NewsSectionPart = ({ newsData }: { newsData: NEWS_QUERYResult }) => {
                             {formatDate(item.createdAt)}
                           </p>
                         </div>
-                        <Badge className="badge-primary" variant="outline">{item.category}</Badge>
+                        <Badge className="badge-primary" variant="outline">
+                          {item.category}
+                        </Badge>
                       </CardDescription>
                       <CardTitle>
-                        <Link href={`/news/${item._id}`} className="cursor-pointer">
-                        <TooltipProvider>
-                          <Tooltip>
-                            <TooltipTrigger className="text-justify leading-relaxed line-clamp-2">
-                              <p>{item.title}</p>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p>{item.title}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
+                        <Link
+                          href={`/news/${item._id}`}
+                          className="cursor-pointer"
+                        >
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger className="text-justify leading-relaxed line-clamp-2">
+                                <p>{item.title}</p>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>{item.title}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
                         </Link>
                       </CardTitle>
                       <CardDescription>
@@ -88,13 +94,15 @@ const NewsSectionPart = ({ newsData }: { newsData: NEWS_QUERYResult }) => {
                     <CardContent className="cursor-pointer">
                       <Link href={`/news/${item._id}`}>
                         <Image
+                          placeholder="blur"
+                          blurDataURL={img150x150}
                           src={item.image || placeholder500x300}
                           alt={item.title || "Article"}
                           width={1280}
                           height={700}
                           className="rounded-lg"
                         />
-                    </Link>
+                      </Link>
                     </CardContent>
                   </Card>
                 </CarouselItem>

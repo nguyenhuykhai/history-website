@@ -1,4 +1,5 @@
 "use client";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 import { placeholder500x300 } from "@/assets/image";
 import Member, { MembersProps } from "@/components/units/organisms/Member";
 import UnitCarousel from "@/components/units/organisms/UnitCarousel";
@@ -16,6 +17,8 @@ const UnitsClient = ({ unit }: { unit: UNITS_QUERY_BY_IDResult }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={img150x150}
               src={unit?.image || placeholder500x300}
               alt={unit?.name || "background"}
               width={1280}

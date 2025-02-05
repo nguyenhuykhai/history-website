@@ -3,6 +3,7 @@ import Image from "next/image";
 import TanXuanLogo from "../../assets/image/home-page/tan-xuan-logo.webp";
 import Facebook from "../../assets/image/social/facebook.svg";
 import { useTranslations } from "next-intl";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 
 const Sidebar = () => {
   const t = useTranslations("Sidebar");
@@ -13,6 +14,8 @@ const Sidebar = () => {
         <div className="bg-white dark:bg-gray-800 shadow rounded p-4 mb-4">
           <div className="flex items-center gap-4">
             <Image
+              placeholder="blur"
+              blurDataURL={img150x150}
               className="w-10 h-10 rounded-full ring-2 ring-gray-300 dark:ring-gray-600"
               src={TanXuanLogo}
               alt="Tan Xuan Logo"
@@ -34,6 +37,8 @@ const Sidebar = () => {
               }
             >
               <Image
+                placeholder="blur"
+                blurDataURL={img150x150}
                 data-tooltip-target="tooltip-jese"
                 className="w-10 h-10 rounded"
                 src={Facebook}

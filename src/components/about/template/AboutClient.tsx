@@ -1,4 +1,5 @@
 "use client";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 import { tanXuanMap } from "@/assets/image";
 import AboutCarousel from "@/components/about/organisms/AboutCarousel";
 import { useTranslations } from "next-intl";
@@ -17,6 +18,8 @@ const AboutClient = () => {
             {/* Left: Image */}
             <div>
               <Image
+                placeholder="blur"
+                blurDataURL={img150x150}
                 src={tanXuanMap}
                 alt="Tân Xuân Landscape"
                 className="rounded-lg shadow-lg"
@@ -39,7 +42,7 @@ const AboutClient = () => {
           {/* Landscape Section */}
           <div className="mb-12">
             <h1 className="heading-secondary">{t("scene")}</h1>
-            <AboutCarousel t={t}/>
+            <AboutCarousel t={t} />
           </div>
 
           {/* Google Map */}

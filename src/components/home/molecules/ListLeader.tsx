@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+
 import React from "react";
 import { placeholder150 } from "@/assets/image";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 
 interface ListLeaderProps {
   leaders: Array<{
@@ -21,6 +23,8 @@ const ListLeader: React.FC<ListLeaderProps> = ({ leaders }) => {
       {leaders.map((leader) => (
         <div key={leader._id} className="text-center">
           <Image
+            placeholder="blur"
+            blurDataURL={img150x150}
             src={leader.image || placeholder150}
             alt={leader.name || "Leader"}
             width={150}

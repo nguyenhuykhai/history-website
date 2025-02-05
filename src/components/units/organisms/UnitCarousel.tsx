@@ -1,4 +1,5 @@
 "use client";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 import {
   Carousel,
   CarouselContent,
@@ -24,6 +25,8 @@ const UnitCarousel: React.FC<UnitCarouselProps> = ({ culture, t }) => {
             {culture.map((image, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <Image
+                  placeholder="blur"
+                  blurDataURL={img150x150}
                   src={image}
                   alt="slider"
                   width={1280}

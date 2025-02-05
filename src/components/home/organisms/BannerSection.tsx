@@ -5,6 +5,7 @@ import sliderTwo from "@/assets/image/home-page/sliderTwo.webp";
 import { Carousel, CarouselContent, CarouselItem } from "../../ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import { img150x150 } from "@/assets/data/imgPlaceholder";
 
 const BannerSection = () => {
   const images = [sliderOne, sliderTwo];
@@ -16,7 +17,14 @@ const BannerSection = () => {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <Image src={image} alt="slider" width={1280} height={700} />
+              <Image
+                placeholder="blur"
+                blurDataURL={img150x150}
+                src={image}
+                alt="slider"
+                width={1280}
+                height={700}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
