@@ -1,9 +1,8 @@
-
 import { client } from "@/sanity/lib/client";
 import { UNITS_QUERY_BY_ID } from "@/sanity/lib/queries";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import logo from "@/assets/image/background/co-dang.webp";
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 import LoadingComponent from "@/components/custom/LoadingComponent";
 
 const UnitsClient = dynamic(

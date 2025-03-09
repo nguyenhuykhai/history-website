@@ -1,7 +1,7 @@
 import LoadingComponent from "@/components/custom/LoadingComponent";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import logo from "@/assets/image/background/co-dang.webp";
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 
 export const metadata: Metadata = {
   title: "Lịch sử Đảng bộ xã Tân Xuân - Truyền thống cách mạng 1930-2020",

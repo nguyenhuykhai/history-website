@@ -5,7 +5,7 @@ import { NEW_QUERY_BY_IDResult } from "@/sanity/types";
 import markdownit from "markdown-it";
 import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
-import logo from "@/assets/image/background/co-dang.webp";
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 import { placeholder500x300 } from "@/assets/image";
 
 const NewsClient = dynamic(
@@ -35,7 +35,8 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
         <meta
           name="description"
           content={
-            data.description || "Cập nhật tin tức mới nhất từ Đảng bộ xã Tân Xuân."
+            data.description ||
+            "Cập nhật tin tức mới nhất từ Đảng bộ xã Tân Xuân."
           }
         />
         <link rel="icon" href={logo.src} />
@@ -46,7 +47,8 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
         <meta
           property="og:description"
           content={
-            data.description || "Cập nhật tin tức mới nhất từ Đảng bộ xã Tân Xuân."
+            data.description ||
+            "Cập nhật tin tức mới nhất từ Đảng bộ xã Tân Xuân."
           }
         />
         <meta
@@ -57,7 +59,10 @@ const NewDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
           property="og:image"
           content={data.image || placeholder500x300.src}
         />
-        <meta property="og:image:alt" content={data.title || "Tin tức - Đảng bộ xã Tân Xuân"} />
+        <meta
+          property="og:image:alt"
+          content={data.title || "Tin tức - Đảng bộ xã Tân Xuân"}
+        />
         <meta property="og:type" content="article" />
         <meta name="robots" content="index, follow" />
         <link

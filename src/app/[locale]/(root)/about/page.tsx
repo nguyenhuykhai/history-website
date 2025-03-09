@@ -1,6 +1,6 @@
 import LoadingComponent from "@/components/custom/LoadingComponent";
 import dynamic from "next/dynamic";
-import logo from "@/assets/image/background/co-dang.webp";
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const AboutClient = dynamic(
   () => import("@/components/about/template/AboutClient"),
   {
-    loading: () => <LoadingComponent />
+    loading: () => <LoadingComponent />,
   }
 );
 

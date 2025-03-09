@@ -1,7 +1,6 @@
-
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
-import logo from "@/assets/image/background/co-dang.webp";
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 import LoadingComponent from "@/components/custom/LoadingComponent";
 
 export const metadata: Metadata = {

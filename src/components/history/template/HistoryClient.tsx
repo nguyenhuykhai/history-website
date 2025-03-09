@@ -18,7 +18,7 @@ const HistoryClient = () => {
   return (
     <>
       <section className="px-0 py-0 md:px-6 max-w-7xl mx-auto">
-        <FlipText className="flex-text hidden lg:block">{t("title")}</FlipText>
+        <FlipText className="flip-text hidden lg:block">{t("title")}</FlipText>
         <h1 className="heading-secondary block lg:hidden">{t("title")}</h1>
         <p className="text-lg text-justify font-medium text-gray-900 dark:text-white mb-6">
           {t("description")}

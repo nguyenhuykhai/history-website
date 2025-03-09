@@ -4,7 +4,7 @@ import { SanityLive } from "@/sanity/lib/live";
 import { NEWS_QUERY, TERMS_QUERY, UNITS_QUERY } from "@/sanity/lib/queries";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import logo from "@/assets/image/background/co-dang.webp"
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 
 export const metadata: Metadata = {
   title: "Đảng bộ xã Tân Xuân - Thông tin chính thức và hoạt động",

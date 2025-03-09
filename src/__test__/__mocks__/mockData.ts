@@ -4,7 +4,7 @@ import {
   UNITS_QUERYResult,
 } from "@/sanity/types";
 import { Metadata } from "next";
-import logo from "@/assets/image/background/co-dang.webp";
+import logo from "@/assets/image/background/logo-doan-thanh-nien.webp";
 
 export const mockTerms: TERMS_QUERYResult = [
   {

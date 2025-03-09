@@ -70,7 +70,8 @@
     "phoneLabel": "Phone",
     "timeLabel": "Working hours",
     "timeInfo": "From Monday to Friday (7:00 AM - 5:00 PM)",
-    "hamlets": "People's Committee of hamlets"
+    "hamlets": "People's Committee of hamlets",
+    "button": "View full images"
   },
   "Language": {
     "switch_language": "Vietnamese"

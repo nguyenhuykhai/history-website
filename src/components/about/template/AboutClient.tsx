@@ -2,6 +2,7 @@
 import { img150x150 } from "@/assets/data/imgPlaceholder";
 import { tanXuanMap } from "@/assets/image";
 import AboutCarousel from "@/components/about/organisms/AboutCarousel";
+import { FlipText } from "@/components/magicui/flip-text";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
@@ -11,7 +12,9 @@ const AboutClient = () => {
   return (
     <div>
       <section>
-        <h1 className="heading-secondary">{t("title")}</h1>
+        <FlipText className="flip-text hidden lg:block">{t("title")}</FlipText>
+        <h1 className="heading-secondary block lg:hidden">{t("title")}</h1>
+        {/* <h1 className="heading-secondary">{t("title")}</h1> */}
         <div className="container mx-auto px-0 md:px-4">
           {/* Main Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">

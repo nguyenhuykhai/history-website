@@ -14,7 +14,7 @@ const ContactClient = () => {
   return (
     <>
       <main className="section_container !px-0 !pt-0">
-        <FlipText className="flex-text hidden lg:block">{t("title")}</FlipText>
+        <FlipText className="flip-text hidden lg:block">{t("title")}</FlipText>
         <h1 className="heading-secondary text-justify block lg:hidden">
           {t("title")}
         </h1>
@@ -48,16 +48,16 @@ const ContactClient = () => {
         {/* Contact Information Accordion */}
         <ContactAccordion t={t} />
 
-        <FlipText className="flex-text hidden lg:block">
+        <FlipText className="flip-text hidden lg:block">
           {t("hamlets")}
         </FlipText>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {hamlets.map((item, index) => (
             <ExpandingCard
               key={index}
               title={item.name}
-              // description={item.description}
               image={item.image}
+              t={t}
             />
           ))}
         </div>
