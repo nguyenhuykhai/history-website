@@ -48,7 +48,7 @@ export const news = defineType({
       type: "date",
       validation: (Rule) => Rule.required(),
       options: {
-        dateFormat: "DD/MM/YYYY"
+        dateFormat: "DD/MM/YYYY",
       },
     }),
   ],

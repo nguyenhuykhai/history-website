@@ -248,7 +248,7 @@ export type NEWS_QUERYResult = Array<{
   createdAt: string | null;
 }>;
 // Variable: NEW_QUERY_BY_ID
-// Query: *[_type == "news" && _id == $id][0] {  _id,  slug,  title,  image,  category,  author -> {    name, _id, title, image  },  _createdAt,  description }
+// Query: *[_type == "news" && _id == $id][0] {  _id,  slug,  title,  image,  category,  author -> {    name, _id, title, image  },  createdAt,  description }
 export type NEW_QUERY_BY_IDResult = {
   _id: string;
   slug: Slug | null;
@@ -261,7 +261,7 @@ export type NEW_QUERY_BY_IDResult = {
     title: Array<string> | null;
     image: string | null;
   } | null;
-  _createdAt: string;
+  createdAt: string | null;
   description: string | null;
 } | null;
 // Variable: UNITS_QUERY
@@ -329,7 +329,7 @@ declare module "@sanity/client" {
   interface SanityQueries {
     "*[_type == \"terms\"] | order(_createdAt asc) {\n  _id,\n  name,\n  description,\n  data[] -> {\n    name, _id, title, image\n  },\n  _createdAt,\n  _updatedAt,\n }": TERMS_QUERYResult;
     "*[_type == \"news\" && defined(slug.current)] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title\n  },\n  createdAt\n }": NEWS_QUERYResult;
-    "*[_type == \"news\" && _id == $id][0] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title, image\n  },\n  _createdAt,\n  description\n }": NEW_QUERY_BY_IDResult;
+    "*[_type == \"news\" && _id == $id][0] {\n  _id,\n  slug,\n  title,\n  image,\n  category,\n  author -> {\n    name, _id, title, image\n  },\n  createdAt,\n  description\n }": NEW_QUERY_BY_IDResult;
     "*[_type == \"units\" && defined(slug.current)] | order(level asc) {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2\n  },\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERYResult;
     "*[_type == \"units\" && _id == $id][0] {\n  _id,\n  slug,\n  name,\n  image,\n  members[] -> {\n    _id,\n    name,\n    title,\n    image,\n    tenCsd,\n    tenCsdTrucThuoc,\n    soLyLich,\n    soTheDang,\n    gioiTinh,\n    ngaySinh,\n    congViecChinhDangLam,\n    tonGiao,\n    ngayVaoDang,\n    ngayVaoDangChinhThuc,\n    ngayVaoDangLan2,\n    note\n  },\n  culture,\n  description,\n  _createdAt,\n  _updateAt\n }": UNITS_QUERY_BY_IDResult;
   }

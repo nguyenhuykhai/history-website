@@ -6,9 +6,9 @@ import { CalendarDays } from "lucide-react";
 import React from "react";
 
 type NewsClientProps = {
-    data: NEW_QUERY_BY_IDResult;
-    parsedContent: string;
-}
+  data: NEW_QUERY_BY_IDResult;
+  parsedContent: string;
+};
 
 const NewsClient: React.FC<NewsClientProps> = ({ data, parsedContent }) => {
   return (
@@ -27,7 +27,7 @@ const NewsClient: React.FC<NewsClientProps> = ({ data, parsedContent }) => {
             >
               <div className="flex gap-2 items-center">
                 <CalendarDays className="w-5 h-5 text-black-100 dark:text-white-100" />
-                <p className="tag-date">{formatDateTime(data?._createdAt)}</p>
+                <p className="tag-date">{formatDateTime(data?.createdAt)}</p>
               </div>
               <p className="text-20-medium">{data?.author?.name}</p>
               <p className="tag-date !font-medium !text-sm">

@@ -27,7 +27,6 @@ export const NEWS_QUERY = defineQuery(
  }`
 );
 
-
 export const NEW_QUERY_BY_ID = defineQuery(
   `*[_type == "news" && _id == $id][0] {
   _id,
@@ -38,10 +37,10 @@ export const NEW_QUERY_BY_ID = defineQuery(
   author -> {
     name, _id, title, image
   },
-  _createdAt,
+  createdAt,
   description
  }`
-)
+);
 
 export const UNITS_QUERY = defineQuery(
   `*[_type == "units" && defined(slug.current)] | order(level asc) {
@@ -70,7 +69,7 @@ export const UNITS_QUERY = defineQuery(
   _createdAt,
   _updateAt
  }`
-)
+);
 
 export const UNITS_QUERY_BY_ID = defineQuery(
   `*[_type == "units" && _id == $id][0] {
@@ -101,4 +100,4 @@ export const UNITS_QUERY_BY_ID = defineQuery(
   _createdAt,
   _updateAt
  }`
-)
+);
