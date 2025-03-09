@@ -9,6 +9,7 @@
     "about": "About",
     "news": "News",
     "cultural": "Ho Chi Minh Cultural Space",
+    "law": "Legal Propaganda Corner",
     "contact": "Contact",
     "history": "History",
     "language": "Choose a language",
@@ -56,6 +57,11 @@
     "content": "We are honored to introduce the works of President Ho Chi Minh and the works written about Him, about His life, His views, His lifestyle,... that every generation of Vietnamese people should preserve, pass on and learn",
     "btn": "Read now"
   },
+  "Law": {
+    "title": "Legal Propaganda Corner",
+    "description": "Information about the law is continuously updated by us Tan Xuan Commune Youth Union",
+    "btn": "Read more"
+  },
   "Contact": {
     "title": "Contact Information",
     "description": "We are always ready to listen and support you. Please contact us if you have any questions or requests",
@@ -63,7 +69,8 @@
     "addressInfo": "No. 122, Le Thi Ha Street, Hamlet 2, Tan Xuan Commune, Hoc Mon District",
     "phoneLabel": "Phone",
     "timeLabel": "Working hours",
-    "timeInfo": "From Monday to Friday (7:00 AM - 5:00 PM)"
+    "timeInfo": "From Monday to Friday (7:00 AM - 5:00 PM)",
+    "hamlets": "People's Committee of hamlets"
   },
   "Language": {
     "switch_language": "Vietnamese"

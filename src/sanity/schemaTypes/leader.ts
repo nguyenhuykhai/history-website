@@ -22,7 +22,6 @@ export const leader = defineType({
       title: "Ảnh đại diện",
       name: "image",
       type: "url",
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: "Tên CSĐ",

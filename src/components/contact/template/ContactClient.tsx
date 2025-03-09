@@ -1,5 +1,9 @@
 "use client";
+import { hamlets } from "@/assets/data/Hamlet_Data";
+import { placeholder800x800 } from "@/assets/image";
 import ContactAccordion from "@/components/contact/organisms/ContactAccordion";
+import ExpandingCard from "@/components/contact/organisms/ExpandingCard";
+import { FlipText } from "@/components/magicui/flip-text";
 import { Separator } from "@/components/ui/separator";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -10,9 +14,12 @@ const ContactClient = () => {
   return (
     <>
       <main className="section_container !px-0 !pt-0">
-        <h1 className="heading-secondary">{t("title")}</h1>
-        <p className="text-lg text-justify font-medium text-gray-900 dark:text-white mb-6">
-          &quot;{t("description")}&quot;
+        <FlipText className="flex-text hidden lg:block">{t("title")}</FlipText>
+        <h1 className="heading-secondary text-justify block lg:hidden">
+          {t("title")}
+        </h1>
+        <p className="text-lg text-justify md:text-center font-medium text-gray-900 dark:text-white mb-6">
+          {t("description")}
         </p>
         <Separator className="mb-10" />
 
@@ -39,7 +46,21 @@ const ContactClient = () => {
         </section>
 
         {/* Contact Information Accordion */}
-        <ContactAccordion t={t}/>
+        <ContactAccordion t={t} />
+
+        <FlipText className="flex-text hidden lg:block">
+          {t("hamlets")}
+        </FlipText>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {hamlets.map((item, index) => (
+            <ExpandingCard
+              key={index}
+              title={item.name}
+              // description={item.description}
+              image={item.image}
+            />
+          ))}
+        </div>
       </main>
     </>
   );

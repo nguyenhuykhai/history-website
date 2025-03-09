@@ -9,6 +9,7 @@
     "about": "Giới thiệu",
     "news": "Tin tức",
     "cultural": "Không gian văn hóa Hồ Chí Minh",
+    "law": "Góc tuyên truyền pháp luật",
     "contact": "Liên hệ",
     "history": "Lịch sử Đảng bộ",
     "language": "Chọn ngôn ngữ",
@@ -56,6 +57,11 @@
     "content": "Trân trọng giới thiệu những tác phẩm của Chủ tịch Hồ Chí Minh và những tác phẩm viết về Người, về cuộc đời, các quan điểm, lối sống,... mà mọi thế hệ người dân Việt Nam nên bảo tồn, lưu truyền và học tập",
     "btn": "Đọc ngay"
   },
+  "Law": {
+    "title": "Góc tuyên truyền pháp luật",
+    "description": "Thông tin về pháp luật được cập nhật liên tục bởi chúng tôi Đoàn thanh niên xã Tân Xuân",
+    "btn": "Đọc ngay"
+  },
   "Contact": {
     "title": "Thông tin liên hệ",
     "description": "Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Hãy liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào",
@@ -63,7 +69,8 @@
     "addressInfo": "Số 122, đường Lê Thị Hà, Ấp 2, xã Tân Xuân, huyện Hóc Môn",
     "phoneLabel": "Điện thoại",
     "timeLabel": "Thời gian làm việc",
-    "timeInfo": "Từ thứ hai đến thứ sáu (7:00 AM - 5:00 PM)"
+    "timeInfo": "Từ thứ hai đến thứ sáu (7:00 AM - 5:00 PM)",
+    "hamlets": "Ban nhân dân các ấp"
   },
   "Language": {
     "switch_language": "Tiếng Anh"

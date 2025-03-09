@@ -1,6 +1,5 @@
 "use client";
 
-
 import { LanguageToggle } from "@/components/custom/LanguageToggle";
 import { ThemeToggle } from "@/components/custom/ThemeToggle";
 import { Link } from "@/i18n/routing";
@@ -21,6 +20,7 @@ export function Navbar() {
     { name: t("about"), href: `/about` },
     { name: t("history"), href: `/history` },
     { name: t("cultural"), href: `/cultural` },
+    { name: t("law"), href: `/law` },
     { name: t("contact"), href: `/contact` },
     {
       name: t("language"),
@@ -62,16 +62,19 @@ export function Navbar() {
           {/* Desktop navigation */}
           <div className="flex justify-between items-center">
             <ul className="hidden lg:flex items-center">
-              {navigation.map((item, index) => item.href && (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className="text-white px-4 py-3 block hover:bg-red-700 text-sm xl:text-base"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              {navigation.map(
+                (item, index) =>
+                  item.href && (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className="text-white px-4 py-3 block hover:bg-red-700 text-sm xl:text-base"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  )
+              )}
             </ul>
             <div className="hidden md:flex items-center gap-2">
               <LanguageToggle />

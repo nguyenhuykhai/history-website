@@ -1,5 +1,6 @@
 "use client";
 import HistoryAccordion from "@/components/history/organisms/HistoryAccordion";
+import { FlipText } from "@/components/magicui/flip-text";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -17,9 +18,10 @@ const HistoryClient = () => {
   return (
     <>
       <section className="px-0 py-0 md:px-6 max-w-7xl mx-auto">
-        <h1 className="heading-secondary">{t("title")}</h1>
+        <FlipText className="flex-text hidden lg:block">{t("title")}</FlipText>
+        <h1 className="heading-secondary block lg:hidden">{t("title")}</h1>
         <p className="text-lg text-justify font-medium text-gray-900 dark:text-white mb-6">
-          &quot;{t("description")}&quot;
+          {t("description")}
         </p>
         <div className="flex justify-start mb-10">
           <Button
@@ -32,7 +34,7 @@ const HistoryClient = () => {
         </div>
       </section>
       <div className="px-0 py-0 md:px-6 max-w-7xl mx-auto">
-        <HistoryAccordion t={t}/>
+        <HistoryAccordion t={t} />
       </div>
     </>
   );
